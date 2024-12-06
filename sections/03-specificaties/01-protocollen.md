@@ -6,5 +6,5 @@ Het is ***AANBEVOLEN*** om het OpenTelemetry Protocol (OTLP) te gebruiken in de 
 
 > OpenTelemetry is een open source framework voor het beheren, genereren, verzamelen en exporteren van telemetriegegevens. Door het gebruik van deze open standaard kunnen leverancierspecifieke integraties voorkomen worden.
 
-Als gebruik wordt gemaakt van  HTTP/1.1 [[RFC9112]] of HTTP/2 [[RFC9113]] voor het uitvoeren van dataverwerkingen in meerdere applicaties ***MOET*** gebruik worden gemaakt van de W3C Trace Context specificatie voor het uitwisselen van metagegevens over {{Traces}}.
+Als gebruik wordt gemaakt van  HTTP/1.1 [[RFC9112]] of HTTP/2 [[RFC9113]] voor het uitvoeren van dataverwerkingen in meerdere applicaties ***MOET*** gebruik worden gemaakt van de [[[trace-context-1]]] specificatie voor het uitwisselen van metagegevens over {{Traces}}.
 
