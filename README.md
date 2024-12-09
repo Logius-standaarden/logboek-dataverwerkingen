@@ -16,7 +16,7 @@ De overheid wil voor burgers en bedrijven zo transparant mogelijk zijn in de omg
 Het project Logboek Dataverwerkingen (voorheen: Verwerkingenlogging) maakt deel uit van het [actieplan Data bij de Bron](https://www.digitaleoverheid.nl/data-bij-de-bron/) en onderzoekt met Digilab in samenwerking met diverse overheidspartijen (ministeries, uitvoeringsorganisaties en gemeentes) of we op basis van de tot nu toe opgedane inzichten een overheidsbrede standaard kunnen vaststellen. Na het succesvol beproeven van de standaard wordt deze voorgesteld voor opname in de [‘Pas toe of leg uit’-lijst van het Forum voor Standaardisatie](https://forumstandaardisatie.nl/pas-toe-leg-uit-beleid).
 
 > bron: [Digilab.nl](https://digilab.overheid.nl/projecten/logboek-dataverwerkingen/)
-
+>
 
 ## Doel
 
