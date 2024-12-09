@@ -17,6 +17,9 @@ Aanvullende functionaliteit wordt gestandaardiseerd in `extensies`:
 - *Extensie Inzage*<br>
   Deze extensie heeft een afhankelijkheid van de extensies *Betrokkenen* en *Verwerkte Data*, en biedt een interface op de logs vanuit een bepaald perspectief.
 
+- *Extensie (geo)objecten*<br>
+  Deze extensie specificeert hoe dataverwerkingen voor [objecten](https://geonovum.github.io/logboek-dataverwerkingen-voor-objecten/) kunnen worden vastgelegd en beheerd in een logboek.
+
 
 ## Profielen
 
