@@ -10,7 +10,7 @@ Het project Logboek Dataverwerkingen (voorheen: Verwerkingenlogging) maakt deel 
 
 ## Verwijzingen
 
-De Logboek Dataverwerkingen (LDV) standaard bestaat uit de volgende drie documenten:
+De Logboek Dataverwerkingen (LDV) standaard bestaat uit de volgende vier documenten:
 
 | Beschrijving van het document           | Gepubliceerde versie                  | Werk versie                             | Repository                                                   |
 | --------------------------------------- | ------------------------------------- | --------------------------------------- | ------------------------------------------------------------ |
