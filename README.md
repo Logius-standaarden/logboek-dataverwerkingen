@@ -29,7 +29,7 @@ De standaard Logboek Dataverwerkingen beschrijft een manier om technisch interop
 
 ## Overzicht
 
-De Logboek Dataverwerkingen (LDV) standaard bestaat uit de volgende drie documenten:
+De Logboek Dataverwerkingen (LDV) standaard bestaat uit de volgende vier documenten:
 
 | Beschrijving van het document           | Gepubliceerde versie                  | Werk versie                             | Repository                                                   |
 | --------------------------------------- | ------------------------------------- | --------------------------------------- | ------------------------------------------------------------ |
