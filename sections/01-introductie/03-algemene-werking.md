@@ -27,7 +27,7 @@ In een **profiel** worden aanvullende beperkingen en verplichtingen vastgelegd o
 manier kan een groep organisaties interoperabiliteit organiseren. Voorbeelden van aanvullende afspraken in een profiel zijn:
 
 - De combinatie van extensies die gebruikt wordt
-- Afspraken over specifieke aanvullende eisen (bijvoorbeeld over TLS configuratie)
+- Afspraken over specifieke aanvullende eisen (bijvoorbeeld over [TLS](https://www.forumstandaardisatie.nl/open-standaarden/tls) configuratie)
 - Afspraken over data-retentie
 - De wijze waarop pseudonimisering van persoonsgegevens plaatsvindt
 
