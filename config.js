@@ -1,7 +1,7 @@
 const localConfig = {
   shortName: "logboek-dataverwerkingen",
-  publishDate: "2024-10-01",
-  publishVersion: "0.7.0",
+  publishDate: "2024-12-13",
+  publishVersion: "0.8.0",
   github: "https://github.com/Logius-standaarden/logboek-dataverwerkingen",
 
   license: "cc-by",
