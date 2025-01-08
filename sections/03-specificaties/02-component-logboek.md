@@ -17,17 +17,17 @@ De interface ***MOET*** de volgende velden implementeren:
 | Veld                  | Type           | optioneel | Omschrijving |
 |-----------------------|----------------|---------------|--------------|
 | `trace_id`            | 16 byte        | verplicht     | Unieke identificerende code van {{Trace}} die {{Dataverwerking}} volgt |
-| `operation_id`        |  8 byte        | verplicht     | Unieke identificerende code van {{Actie}} binnen de Dataverwerking |
+| `span_id`        |  8 byte        | verplicht     | Unieke identificerende code van {{Actie}} binnen de Dataverwerking |
 | `status_code`         | enum           | verplicht     | Status van de Actie |
 | `name`                | string         | verplicht     | Naam van de specifieke Actie binnen de Dataverwerking |
 | `start_time`          | timestamp (ms) | verplicht     | Tijdstip waarop de Actie gestart is |
 | `end_time`            | timestamp (ms) | verplicht     | Tijdstip waarop de Actie beëindigd is |
-| `parent_operation_id` |  8 byte        | optioneel     | Unieke identificerende code aanroepende Actie *binnen huidige Trace* |
+| `parent_span_id` |  8 byte        | optioneel     | Unieke identificerende code aanroepende Actie *binnen huidige Trace* |
 | `foreign_operation`   | message        | optioneel     | Unieke identificerende code aanroepende Actie *bij externe partij* |
 | `resource`            | message        | optioneel     | Zie toelichting hieronder |
 | `attributes`          | list           | verplicht     | Verplichte key-value pairs |
 
-Het veld `operation_id` is in implementaties voor logging ook wel bekend als `span_id`.
+Het veld `span_id` is in implementaties voor logging.
 
 Het veld `status_code` is een enumeratie die de volgende waarden kan bevatten:
 
@@ -39,7 +39,7 @@ Het veld `foreign_operation` is een `message`, opgebouwd uit de volgende velden:
 | Veld                  | Type           | optioneel | Omschrijving |
 |-----------------------|----------------|---------------|--------------|
 | `trace_id`            | 16 byte        | verplicht     | Unieke identificerende code van *Trace* bij externe partij |
-| `operation_id`        |  8 byte        | verplicht     | Unieke identificerende code van de *Actie* bij externe partij |
+| `span_id`        |  8 byte        | verplicht     | Unieke identificerende code van de *Actie* bij externe partij |
 | `entity`              |  URI           | verplicht     | URI verwijzend naar externe partij |
 
 Deze velden worden optioneel aangeboden door een aanroepende Applicatie, zie de specificatie van het [gedrag van Applicaties](#gedrag-0).
