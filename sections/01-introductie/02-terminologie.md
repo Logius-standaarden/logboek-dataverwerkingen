@@ -31,9 +31,7 @@ De Betrokkene heeft het recht om van de {{Verantwoordelijke}} uitsluitsel te ver
 Softwaretoepassing waarmee het log van {{Dataverwerkingen}} wordt bijgehouden.
 
 
-<dfn data-lt="Operaties">Operatie</dfn>
 
-*--nog definiëren--*
 
 
 <dfn data-lt="Registers">Register</dfn>
