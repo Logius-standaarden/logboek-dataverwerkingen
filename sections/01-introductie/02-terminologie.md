@@ -30,6 +30,9 @@ De Betrokkene heeft het recht om van de {{Verantwoordelijke}} uitsluitsel te ver
 
 Softwaretoepassing waarmee het log van {{Dataverwerkingen}} wordt bijgehouden.
 
+<dfn>Logregel</dfn>
+
+Resultaat van een enkele gebeurtenis in de logging [NEN7513: Medische informatica - logging - vastleggen van acties op persoonlijke gezondheidsinformatie](https://www.nen.nl/nen-7513-2024-nl-329182).
 
 
 
