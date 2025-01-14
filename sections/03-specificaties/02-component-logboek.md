@@ -42,7 +42,7 @@ Het veld `foreign_operation` is een `message`, opgebouwd uit de volgende velden:
 | `span_id`        |  8 byte        | verplicht     | Unieke identificerende code van de *Actie* bij externe partij |
 | `entity`              |  URI           | verplicht     | URI verwijzend naar externe partij |
 
-Deze velden worden optioneel aangeboden door een aanroepende Applicatie, zie de specificatie van het [gedrag van Applicaties](#gedrag-0).
+Deze velden worden optioneel aangeboden door een aanroepende Applicatie, zie de specificatie van het [gedrag van Applicaties](#Gedrag).
 
 Het veld `resource` is een bericht, opgebouwd uit het volgende veld:
 
