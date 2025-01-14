@@ -35,8 +35,6 @@ Softwaretoepassing waarmee het log van {{Dataverwerkingen}} wordt bijgehouden.
 Resultaat van een enkele gebeurtenis in de logging [NEN7513: Medische informatica - logging - vastleggen van acties op persoonlijke gezondheidsinformatie](https://www.nen.nl/nen-7513-2024-nl-329182).
 
 
-
-
 <dfn data-lt="Registers">Register</dfn>
 
 Register waarin statische gegevens over {{Verwerkingsactiviteiten}} worden geregistreerd en ter beschikking gesteld, zoals het Register van {{Verwerkingsactiviteiten}} uit [[AVG]] art. 30.
