@@ -19,4 +19,4 @@ Organisatorisch werkingsgebied: Nederlandse overheden (Rijk, provincies, gemeent
 
 ## Doelgroep
 
-De standaard heeft als doelgroep iedereen die zich bezighoudt met het implementeren van logging rond dataverwerkingen en beschrijft alleen wat relevant is voor de implementatie. Alle achterliggende overwegingen zijn te vinden in de [Algemene inleiding](https://logius-standaarden.github.io/publicatie/api/Logboek_Algemeen/) en het [Juridisch Beleidskader](https://logius-standaarden.github.io/publicatie/api/Logboek_Juridisch/).
+De standaard heeft als doelgroep iedereen die zich bezighoudt met het implementeren van logging rond dataverwerkingen en beschrijft alleen wat relevant is voor de implementatie. Alle achterliggende overwegingen zijn te vinden in de [Algemene inleiding](https://logius-standaarden.github.io/logboek-dataverwerkingen_Inleiding/) en het [Juridisch Beleidskader](https://logius-standaarden.github.io/logboek-dataverwerkingen_Juridisch-beleidskader/).
