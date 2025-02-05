@@ -6,7 +6,7 @@ const localConfig = {
 
   // TODO: Voordat we releasen moet dit weg worden gehaald. Op dit moment is er nog
   // geen publicatie van deze standaard.
-  isNoTrack: true,
+  latestVersion: "https://logius-standaarden.github.io/logboek-dataverwerkingen/",
 
   license: "cc-by",
   specStatus: "wv",
