@@ -6,8 +6,7 @@ const localConfig = {
 
   // TODO: Voordat we releasen moet dit weg worden gehaald. Op dit moment is er nog
   // geen publicatie van deze standaard.
-  // https://github.com/speced/respec/pull/2968
-  latestVersion: null,
+  isNoTrack: true,
 
   license: "cc-by",
   specStatus: "wv",
