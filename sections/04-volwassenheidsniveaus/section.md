@@ -1,6 +1,6 @@
 ## Volwassenheidsniveaus
 
-Logging kan op verschillende <dfn>volwassenheidsniveaus</dfn>: hoe hoger het volwassenheidsniveaus, hoe meer data er wordt gelogd.
+Logging kan op verschillende <dfn>Volwassenheidsniveaus</dfn>: hoe hoger het volwassenheidsniveau, hoe meer data er wordt gelogd.
 
 ### Definities van niveaus
 
