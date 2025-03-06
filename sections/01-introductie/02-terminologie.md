@@ -19,7 +19,7 @@ Als persoonsgegevens worden verwerkt, wordt de persoon van wie de organisatie pe
 
 <dfn data-lt="Dataverwerkingen|Dataverwerking">Dataverwerking</dfn>
 
-Aansluitend bij de Algemene Verordening Gegevensbescherming (art. 4 lid 2), maar breder toegepast dan alleen persoonsgegevens, wordt voor deze standaard *‘elke bewerking of elk geheel van bewerkingen met betrekking tot gegevens, al dan niet uitgevoerd via geautomatiseerde procedures, zoals het verzamelen, vastleggen, ordenen, structureren, opslaan, bijwerken of wijzigen, opvragen, raadplegen, gebruiken, verstrekken door middel van doorzending, verspreiden of op andere wijze ter beschikking stellen, aligneren of combineren, afschermen, wissen of vernietigen van gegevens’* opgevat als een Dataverwerking. Iedere Dataverwerking bestaat uit één of meerdere {{Acties}}.
+Iedere bewerking (of ieder geheel van bewerkingen) met betrekking tot gegevens, al dan niet uitgevoerd via geautomatiseerde procedures, zoals het verzamelen, vastleggen, ordenen, structureren, opslaan, bijwerken of wijzigen, opvragen, raadplegen, gebruiken, verstrekken door middel van doorzending, verspreiden of op andere wijze ter beschikking stellen, aligneren of combineren, afschermen, wissen of vernietigen van gegevens wordt opgevat als een Dataverwerking. Iedere Dataverwerking bestaat uit één of meerdere {{Acties}}. Voor verwerking van persoonsgegevens sluit dit aan bij de Algemene Verordening Gegevensbescherming (art. 4 lid 2).
 
 
 <dfn>Inzage</dfn>
