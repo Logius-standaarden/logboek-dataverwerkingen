@@ -14,7 +14,7 @@ Iedere softwaretoepassing waarmee dataverwerkingen worden uitgevoerd.
 
 <dfn data-lt="Betrokkenen|Betrokkene">Betrokkene</dfn>
 
-Als persoonsgegevens worden verwerkt, wordt de persoon van wie de organisatie persoonsgegevens verwerkt de 'Betrokkene' genoemd. Dat is dus degene over wie de dataverwerking gaat. De Betrokkene is degene op wie een persoonsgegeven betrekking heeft en die daarmee geïdentificeerd kan worden. Als identificeerbaar wordt beschouwd een natuurlijke persoon die direct of indirect kan worden geïdentificeerd, met name aan de hand van een identificator zoals een naam, een identificatienummer, locatiegegevens, een online identificator of van een of meer elementen die kenmerkend zijn voor de fysieke, fysiologische, genetische, psychische, economische, culturele of sociale identiteit van die natuurlijke persoon [NORA: De Privacy Baseline/Persoonsgegevens en bijzondere persoonsgegevens]
+Als persoonsdata worden verwerkt, wordt de persoon van wie de organisatie persoonsdata verwerkt de 'Betrokkene' genoemd. Dat is dus degene over wie de dataverwerking gaat. De Betrokkene is degene op wie een persoonsgegeven betrekking heeft en die daarmee geïdentificeerd kan worden. Als identificeerbaar wordt beschouwd een natuurlijke persoon die direct of indirect kan worden geïdentificeerd, met name aan de hand van een identificator zoals een naam, een identificatienummer, locatiedata, een online identificator of van een of meer elementen die kenmerkend zijn voor de fysieke, fysiologische, genetische, psychische, economische, culturele of sociale identiteit van die natuurlijke persoon [NORA: De Privacy Baseline/Persoonsgegevens en bijzondere persoonsgegevens]
 
 
 <dfn data-lt="Dataverwerkingen|Dataverwerking">Dataverwerking</dfn>
