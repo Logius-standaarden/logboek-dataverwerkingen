@@ -1,6 +1,6 @@
 ## Volwassenheidsniveaus
 
-Logging kan op verschillende <dfn>Volwassenheidsniveaus</dfn>: hoe hoger het volwassenheidsniveau, hoe meer data er wordt gelogd.
+Logging kan op verschillende <dfn>Volwassenheidsniveaus</dfn>: hoe hoger het volwassenheidsniveau, hoe gedetailleerder er wordt gelogd.
 
 ### Definities van niveaus
 
@@ -50,7 +50,8 @@ Als voor elke {{Dataverwerking}} alle informatie wordt gelogd, dan kan dat probl
 Tegelijkertijd is het laagste niveau van logging niet per definitie voldoende om de vereiste verantwoordelijkheid af te kunnen leggen.
 Dit hangt af van de situatie en de wettelijke bepalingen die verbonden zijn aan een {{Dataverwerking}}.
 Daarom is het van belang dat bij elke dataverwerking er wordt gekeken welk niveau van toepassing is, in plaats van een generiek niveau voor alle dataverwerkingen te bepalen.
+Hierbij is het niet noodzakelijk dat altijd het meest gedetailleerde niveau wordt gekozen.
 
 <p class="note">Op dit moment is de standaard geschikt voor implementaties van volwassenheidsniveau 1.
-De uitwerking van volwassenheidsniveau 2 wordt op dit moment uitgeprobeerd in een project van Geonovum waarbij een extensie voor object wordt beschreven.
-Volwassenheidsniveau 3 is nog niet aan te raden, omdat dit verder wordt uitgewerkt op basis van de bevindingen voor niveau 2.
+De uitwerking van volwassenheidsniveau 2 en 3 worden op dit moment uitgeprobeerd in een project van Geonovum waarbij een extensie voor object wordt beschreven.
+Volwassenheidsniveau 3 is vanwege technische limitaties nog niet aan te raden, omdat dit verder wordt uitgewerkt op basis van de bevindingen voor niveau 2.
