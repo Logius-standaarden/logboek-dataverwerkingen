@@ -5,7 +5,7 @@ In deze sectie wordt de scope van de standaard afgebakend.
 
 ## Vastlegging door Verantwoordelijke
 
-Voor een juiste toepassing van de standaard is het nodig om strict de grenzen aan te houden die passen bij de Verantwoording die een {{Verantwoordelijke}} af moet kunnen leggen. Het wordt *AANBEVOLEN* om alle Dataverwerkingen te loggen alsof zij persoonsgegevens bevatten, ook wanneer de Dataverwerking geen persoonsgegevens betreft. Dit omdat het wettelijk kader dat leidt tot verantwoordingsplicht breder is dan alleen de AVG. Logregels kunnen ook worden gebruikt voor bijvoorbeeld het verantwoorden welke gegevens gebruikt zijn bij het nemen van een besluit.
+Voor een juiste toepassing van de standaard is het nodig om strict de grenzen aan te houden die passen bij de Verantwoording die een {{Verantwoordelijke}} af moet kunnen leggen. Het wordt *AANBEVOLEN* om alle Dataverwerkingen te loggen alsof zij persoonsdata bevatten, ook wanneer de Dataverwerking geen persoonsdata betreft. Dit omdat het wettelijk kader dat leidt tot verantwoordingsplicht breder is dan alleen de AVG. Logregels kunnen ook worden gebruikt voor bijvoorbeeld het verantwoorden welke data gebruikt zijn bij het nemen van een besluit.
 
 Belangrijk uitgangspunt is dat een Verantwoordelijke alleen Logregels bijhoudt voor Dataverwerkingen die onder eigen verantwoordelijkheid plaatsvinden.
 
@@ -31,7 +31,7 @@ Dit betekent o.a. dat de standaard *geen* gedrag of interfaces specificeert voor
 - het regelen van archivering en verwijdering van Logregels
 
 
-## Geen gegevens over gebruikers in Logregels
+## Geen data over gebruikers in Logregels
 
 In Logregels ligt geen informatie vast over welke specifieke medewerker van de Verantwoordelijke ofwel de gebruiker de Dataverwerking heeft uitgevoerd. Deze informatie hoort niet in het Logboek maar in een auditlog, en is daarmee buiten scope van de standaard. Wel is het mogelijk om vanuit auditlogs de relatie te leggen naar specifieke Logregels in het Logboek. (toevoegen link naar Algemene inleiding, besluit over gebruikers)
 
