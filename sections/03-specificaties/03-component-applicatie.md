@@ -19,14 +19,14 @@ De Applicatie ***MOET*** voor iedere actie (`span_id`) een logregel wegschrijven
 
 De Applicatie ***MOET*** bijhouden of een actie geslaagd of mislukt is en dit per Dataverwerking als status (`status_code`) meegeven in de Logregel.
 
-Als de Applicatie een verzoek van een andere Applicatie kan ontvangen, ***MOET*** de Applicatie metagegevens volgens de W3C Trace Context standaard kunnen verwerken en gebruiken in de eigen Trace(s). Metadata verkregen via W3C Trace Context ***MOET*** als `foreign_operation` worden opgenomen in de Logregel.
+Als de Applicatie een verzoek van een andere Applicatie kan ontvangen, ***MOET*** de Applicatie metadata volgens de W3C Trace Context standaard kunnen verwerken en gebruiken in de eigen Trace(s). Metadata verkregen via W3C Trace Context ***MOET*** als `foreign_operation` worden opgenomen in de Logregel.
 
-Als de Applicatie een verzoek aan een andere Applicatie kan versturen, ***MOET*** de Applicatie metagegevens volgens de W3C Trace Context standaard meegeven aan dit verzoek.
+Als de Applicatie een verzoek aan een andere Applicatie kan versturen, ***MOET*** de Applicatie metadata volgens de W3C Trace Context standaard meegeven aan dit verzoek.
 
 De Applicatie ***MAG NIET*** gebruik maken van *Log Sampling*.
 
 
-### Loggen van Dataverwerkingen met persoonsgegevens
+### Loggen van Dataverwerkingen met persoonsdata
 
 Voor iedere Betrokkene moet iedere Dataverwerking apart gelogd worden. De Applicatie ***MOET*** in elke Logregel een identificerende code van de Betrokkene opnemen in `dpl.core.data_subject_id` en aan te duiden welk soort identificerende code wordt gebruikt in `dpl.core.data_subject_id_type`. Het wordt ***AANBEVOLEN*** om de identificerende code te pseudonimiseren.
 
@@ -34,11 +34,11 @@ Wanneer een enkele Dataverwerking meerdere Betrokkenen heeft, ***MOET*** de Appl
 
 Let op: het kan zijn dat pas na een antwoord van een externe Applicatie bekend is dat er meerdere Betrokkenen zijn bij een Dataverwerking, in dat geval moeten na ontvangst van het antwoord de nieuwe acties ten behoeve van correcte logging gestart worden.
 
-Iedere Dataverwerking van persoonsgegevens betreft een Verwerkingsactiviteit die in het Register van Verwerkingsactiviteiten moet zijn opgenomen. De Applicatie ***MOET*** in de Logregel een verwijzing naar de juiste Verwerkingsactiviteit in het Register van Verwerkingsactiviteiten opnemen in het veld `dpl.core.processing_activity_id`.
+Iedere Dataverwerking van persoonsdata betreft een Verwerkingsactiviteit die in het Register van Verwerkingsactiviteiten moet zijn opgenomen. De Applicatie ***MOET*** in de Logregel een verwijzing naar de juiste Verwerkingsactiviteit in het Register van Verwerkingsactiviteiten opnemen in het veld `dpl.core.processing_activity_id`.
 
 
-### Loggen van Dataverwerkingen zonder persoonsgegevens
+### Loggen van Dataverwerkingen zonder data
 
-Dataverwerkingen zonder persoonsgegevens zijn over het algemeen niet als Verwerkingsactiviteit opgenomen in het Register van Verwerkingsactiviteiten. Het wordt aanbevolen om wel een soortgelijk register bij te houden voor alle Dataverwerkingen zonder persoonsgegevens.
+Dataverwerkingen zonder persoonsdata zijn over het algemeen niet als Verwerkingsactiviteit opgenomen in het Register van Verwerkingsactiviteiten. Het wordt aanbevolen om wel een soortgelijk register bij te houden voor alle Dataverwerkingen zonder persoonsdata.
 
 Het wordt ***AANBEVOLEN*** dat de Applicatie in de Logregel een verwijzing naar de juiste Verwerkingsactiviteit in een daarvoor aan te wijzen Register opneemt in het veld `dpl.core.processing_activity_id`.
