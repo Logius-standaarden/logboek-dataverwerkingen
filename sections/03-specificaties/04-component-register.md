@@ -1,6 +1,6 @@
 # Component: Register
 
-Voor ieder {{Register}} met statische gegevens over Dataverwerkingen gelden de volgende specificaties voor het gedrag en de interface.
+Voor ieder {{Register}} met statische data over Dataverwerkingen gelden de volgende specificaties voor het gedrag en de interface.
 
 
 ## Gedrag
