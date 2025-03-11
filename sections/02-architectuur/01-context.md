@@ -9,7 +9,7 @@ Op hoog abstractieniveau zijn voor het begrijpen van deze standaard de volgende 
 Applicaties schrijven logs over Dataverwerkingen weg in een Logboek.
 Logregels in het Logboek verwijzen naar nadere informatie in een Register.
 
-Een Dataverwerking kan plaatsvinden over de grenzen van een verantwoordelijkheid. In dat geval roept een Applicatie van Verantwoordelijke A de Applicatie van Verantwoordelijke B aan. Denk bijvoorbeeld aan het bevragen of muteren van gegevens via een Application Programming Interface (API).
+Een Dataverwerking kan plaatsvinden over de grenzen van een verantwoordelijkheid. In dat geval roept een Applicatie van Verantwoordelijke A de Applicatie van Verantwoordelijke B aan. Denk bijvoorbeeld aan het bevragen of muteren van data via een Application Programming Interface (API).
 
 Een Verantwoordelijke is bijvoorbeeld een organisatie, maar kan ook bestaan uit meerdere organisaties die allemaal onder dezelfde Verantwoordelijke werk uitvoeren. Denk daarbij aan Verwerkers in het kader van de AVG.
 
@@ -23,4 +23,4 @@ Registers bevatten statische informatie waar vanuit Logregels naar verwezen kan 
 
 De standaard beschrijft de interfaces (in het diagram aangeduid met groene lijnen), en het gedrag van de componenten voor zover relevant om technisch interoperabel te worden.
 
-De relatie tussen Logboek en Registers is los. Een Register hoeft niet digitaal te bestaan, wel moet een relatie gelegd kunnen worden vanuit de logregels in het Logboek naar aanvullende gegevens in Registers die de Logregels van nedere context voorzien.
+De relatie tussen Logboek en Registers is los. Een Register hoeft niet digitaal te bestaan, wel moet een relatie gelegd kunnen worden vanuit de logregels in het Logboek naar aanvullende data in Registers die de Logregels van nedere context voorzien.

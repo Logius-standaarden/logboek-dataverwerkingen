@@ -29,7 +29,7 @@ manier kan een groep organisaties interoperabiliteit organiseren. Voorbeelden va
 - De combinatie van extensies die gebruikt wordt
 - Afspraken over specifieke aanvullende eisen (bijvoorbeeld over [TLS](https://www.forumstandaardisatie.nl/open-standaarden/tls) configuratie)
 - Afspraken over data-retentie
-- De wijze waarop [pseudonimisering](https://logius-standaarden.github.io/logboek-dataverwerkingen_Inleiding/#pseudonimiseren-gegevens) van persoonsgegevens plaatsvindt
+- De wijze waarop [pseudonimisering](https://logius-standaarden.github.io/logboek-dataverwerkingen_Inleiding/#pseudonimiseren-gegevens) van persoonsdata plaatsvindt
 
 
 ## Use case

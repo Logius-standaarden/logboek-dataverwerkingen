@@ -17,7 +17,7 @@ Deze transactie is geoptimaliseerd op eenvoud en snelheid, want deze heeft recht
 
 ## Tonen van informatie over een Dataverwerking
 
-Voor het op betekenisvolle manier tonen van informatie over Dataverwerkingen aan bijvoorbeeld een Betrokkene is het nodig om gegevens op te vragen uit zowel het Logboek als het Register. Deze flow mag wat complexer zijn, omdat deze niet voor alle vastgelegde data wordt uitgevoerd en het belang van de bevraging rechtvaardigt dat een bevraging wat langer kan duren.
+Voor het op betekenisvolle manier tonen van informatie over Dataverwerkingen aan bijvoorbeeld een Betrokkene is het nodig om data op te vragen uit zowel het Logboek als het Register. Deze flow mag wat complexer zijn, omdat deze niet voor alle vastgelegde data wordt uitgevoerd en het belang van de bevraging rechtvaardigt dat een bevraging wat langer kan duren.
 
 ```mermaid
 sequenceDiagram
