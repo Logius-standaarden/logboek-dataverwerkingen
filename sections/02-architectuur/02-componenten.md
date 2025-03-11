@@ -23,4 +23,4 @@ Het Register kan een Applicatie zijn, in dat geval is het een Applicatie met een
 
 Dataverwerkingen in het Register worden gelogd in een Logboek Dataverwerkingen.
 
-Voor alle Dataverwerkingen waarbij persoonsgegevens worden verwerkt is wettelijk geregeld dat de Verwerkingsactiviteiten moeten worden beschreven in het zogenaamde Register van Verwerkingsactiviteiten (AVG art. 30). Dit Register wordt verondersteld aanwezig te zijn in iedere organisatie die de standaard Logboek Dataverwerkingen toepast.
+Voor alle Dataverwerkingen waarbij persoonsdata worden verwerkt is wettelijk geregeld dat de Verwerkingsactiviteiten moeten worden beschreven in het zogenaamde Register van Verwerkingsactiviteiten (AVG art. 30). Dit Register wordt verondersteld aanwezig te zijn in iedere organisatie die de standaard Logboek Dataverwerkingen toepast.
