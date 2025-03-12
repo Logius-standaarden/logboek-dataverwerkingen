@@ -1,4 +1,3 @@
-<!-- markdownlint-disable first-line-heading -->
 # Samenvatting
 
 De overheid wil voor burgers en bedrijven zo transparant mogelijk zijn in de omgang met hun data. Daarom is het bij de informatieverwerking in datasets belangrijk om voor elke mutatie of raadpleging vast te leggen wie deze actie wanneer uitvoert, en waarom. Deze herleidbaarheid speelt zowel een rol in het kader van de wetgeving op het gebied van privacy als ook het streven naar openheid en transparantie bij de overheid. Voor een optimale samenwerking over organisaties en bronnen heen is voor deze logging een algemene standaard nodig.
@@ -16,5 +15,5 @@ De Logboek Dataverwerkingen (LDV) standaard bestaat uit de volgende vier documen
 | --------------------------------------- | ------------------------------------- | --------------------------------------- | ------------------------------------------------------------ |
 | 1. De LDV Normatieve Standaard | - | [Logboek dataverwerkingen (werkversie)](https://logius-standaarden.github.io/logboek-dataverwerkingen/) | [logboek-dataverwerkingen](https://github.com/Logius-standaarden/logboek-dataverwerkingen) |
 | 2. De Algemene Inleiding | - | [De Algemene Inleiding (werkversie)](https://logius-standaarden.github.io/logboek-dataverwerkingen_Inleiding/)|[logboek-dataverwerkingen_Inleiding](https://github.com/Logius-standaarden/logboek-dataverwerkingen_Inleiding)|
-| 3. het Juridische Beleidskader | - |[Juridisch Beleidskader (werkversie)](https://logius-standaarden.github.io/logboek-dataverwerkingen_Juridisch-beleidskader/)|[logboek-dataverwerkingen_Juridisch-beleidskader](https://github.com/Logius-standaarden/logboek-dataverwerkingen_Juridisch-beleidskader/)|
-| 4. LDV Extensie voor objecten | - |[Onderzoek logboek dataverwerkingen voor (geo) objecten](https://geonovum.github.io/logboek-dataverwerkingen-voor-objecten/)|[logboek-dataverwerkingen-voor-objecten](https://github.com/geonovum/logboek-dataverwerkingen-voor-objecten/)|
+| 3. Het Juridische Beleidskader | - |[Juridisch Beleidskader (werkversie)](https://logius-standaarden.github.io/logboek-dataverwerkingen_Juridisch-beleidskader/)|[logboek-dataverwerkingen_Juridisch-beleidskader](https://github.com/Logius-standaarden/logboek-dataverwerkingen_Juridisch-beleidskader/)|
+| 4. LDV Extensie Guideline | - |[Guideline voor het schrijven van een extensie voor LDV (werkversie)](https://logius-standaarden.github.io/logboek-extensie-template/)|[logboek-extensie-template](https://github.com/Logius-standaarden/logboek-extensie-template)|
