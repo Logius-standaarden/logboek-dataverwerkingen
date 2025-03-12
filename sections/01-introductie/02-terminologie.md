@@ -37,7 +37,7 @@ Resultaat van een enkele gebeurtenis in de logging [NEN7513: Medische informatic
 
 <dfn data-lt="Registers">Register</dfn>
 
-Register waarin statische data over {{Verwerkingsactiviteiten}} worden geregistreerd en ter beschikking gesteld, zoals het Register van {{Verwerkingsactiviteiten}} uit [[AVG]] art. 30.
+Register waarin statische data over {{Verwerkingsactiviteiten}} worden geregistreerd en ter beschikking gesteld.
 
 
 <dfn data-lt="Traces">Trace</dfn>
