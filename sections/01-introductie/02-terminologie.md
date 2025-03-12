@@ -24,7 +24,7 @@ Iedere bewerking (of ieder geheel van bewerkingen) met betrekking tot gegevens, 
 
 <dfn>Inzage</dfn>
 
-De Betrokkene heeft het recht om van de {{Verantwoordelijke}} uitsluitsel te verkrijgen over het al dan niet verwerken van hem betreffende persoonsdata en, wanneer dat het geval is, om inzage te verkrijgen van die persoonsdata ([[AVG]], art. 15, lid 1). Met *Inzage* doelen we op de handeling waarmee uitvoering wordt gegeven aan dat recht.
+De Betrokkene heeft het recht om van de {{Verantwoordelijke}} uitsluitsel te verkrijgen over het al dan niet verwerken van hem betreffende gegevens en, wanneer dat het geval is, om inzage te verkrijgen van die gegevens ([[AVG]], art. 15, lid 1). Met *Inzage* doelen we op de handeling waarmee uitvoering wordt gegeven aan dat recht.
 
 <dfn data-lt="Logboeken">Logboek</dfn>
 
