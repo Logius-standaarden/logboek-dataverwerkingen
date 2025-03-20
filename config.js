@@ -32,12 +32,17 @@ const localConfig = {
     {
       name: "Nil Barua",
       company: "Logius",
-      companyURL: "https://github.com/Logius-standaarden",
+      companyURL: "https://logius.nl",
     },
     {
       name: "Martin van der Plas",
       company: "Logius",
-      companyURL: "https://github.com/Logius-standaarden",
+      companyURL: "https://logius.nl",
+    },
+    {
+      name: "Tim van der Lippe",
+      company: "Logius",
+      companyURL: "https://logius.nl",
     }
   ],
 authors:
