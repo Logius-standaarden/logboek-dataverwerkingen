@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant F as Inzage Applicatie
+    participant L as Logboek
+    participant R as Register
+    Note over F, R: Betrokkene vraagt om inzage
+    F->>+L: Vraag logregels van Betrokkene
+    Activate F
+    L-->>-F: logregels
+    F->>+R: Vraag Verwerkingsactiviteiten bij logregels
+    R-->>-F: verwerkingsactiviteiten
+    F-->>F: Combineeer
+    Deactivate F
