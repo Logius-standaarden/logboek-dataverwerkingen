@@ -1,0 +1,6 @@
+sequenceDiagram
+    participant A as Applicatie
+    participant L as Logboek
+    Note over A, L: Dataverwerking in Applicatie
+    A->>+L: Schrijf logregel in Logboek
+    L-->>-A: ack

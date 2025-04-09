@@ -11,8 +11,6 @@ const localConfig = {
   
   edDraftURI: "https://logius-standaarden.github.io/logboek-dataverwerkingen/",
 
-  postProcess: [window.respecMermaid.createFigures],
-
   editors: [
     {
       name: "Jeroen Mulder",
