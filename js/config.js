@@ -1,4 +1,4 @@
-var localConfig = {
+var respecConfig = {
   maxTocLevel: 3,
   specStatus: "WV",
   specType: "ST",
