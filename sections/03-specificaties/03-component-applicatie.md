@@ -2,7 +2,6 @@
 
 Voor iedere {{Applicatie}} waarin Dataverwerkingen plaatsvinden gelden de volgende specificaties voor gedrag.
 
-
 ## Gedrag
 
 Het gespecificeerde gedrag van Applicaties is erop gericht om de interface van het Logboek te gebruiken. Voor alle metadata geldt dat de specificatie te vinden is in de interface van het Logboek.
@@ -25,7 +24,6 @@ Als de Applicatie een verzoek aan een andere Applicatie kan versturen, ***MOET**
 
 De Applicatie ***MAG NIET*** gebruik maken van *Log Sampling*.
 
-
 ### Loggen van Dataverwerkingen met persoonsdata
 
 Voor iedere Betrokkene moet iedere Dataverwerking apart gelogd worden. De Applicatie ***MOET*** in elke Logregel een identificerende code van de Betrokkene opnemen in `dpl.core.data_subject_id` en aan te duiden welk soort identificerende code wordt gebruikt in `dpl.core.data_subject_id_type`. Het wordt ***AANBEVOLEN*** om de identificerende code te pseudonimiseren.
@@ -35,7 +33,6 @@ Wanneer een enkele Dataverwerking meerdere Betrokkenen heeft, ***MOET*** de Appl
 Let op: het kan zijn dat pas na een antwoord van een externe Applicatie bekend is dat er meerdere Betrokkenen zijn bij een Dataverwerking, in dat geval moeten na ontvangst van het antwoord de nieuwe acties ten behoeve van correcte logging gestart worden.
 
 Iedere Dataverwerking van persoonsdata betreft een Verwerkingsactiviteit die in het Register van Verwerkingsactiviteiten moet zijn opgenomen. De Applicatie ***MOET*** in de Logregel een verwijzing naar de juiste Verwerkingsactiviteit in het Register van Verwerkingsactiviteiten opnemen in het veld `dpl.core.processing_activity_id`.
-
 
 ### Loggen van Dataverwerkingen zonder data
 
