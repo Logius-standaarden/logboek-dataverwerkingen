@@ -2,9 +2,9 @@
 
 Op hoog abstractieniveau zijn voor het begrijpen van deze standaard de volgende componenten te onderscheiden:
 
-- {{Applicatie}}
-- {{Logboek}}
-- {{Register}}
+* {{Applicatie}}
+* {{Logboek}}
+* {{Register}}
 
 Applicaties schrijven logs over Dataverwerkingen weg in een Logboek.
 Logregels in het Logboek verwijzen naar nadere informatie in een Register.
