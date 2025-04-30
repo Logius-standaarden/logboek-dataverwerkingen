@@ -29,7 +29,7 @@ Het veld `span_id` is in implementaties voor logging.
 
 Het veld `status_code` is een enumeratie die de volgende waarden kan bevatten:
 
-* 0: STATUS_CODE_UNKNOWN:
+* 0: STATUS_CODE_UNSET:
 * 1: STATUS_CODE_OK:
 * 2: STATUS_CODE_ERROR:
 
