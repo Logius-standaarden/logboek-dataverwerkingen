@@ -29,11 +29,11 @@ Het veld `span_id` is in implementaties voor logging.
 
 Het veld `status_code` is een enumeratie die de volgende waarden kan bevatten:
 
-* `0: STATUS_CODE_UNSET`: De standaardwaarde voor elke statuscode is `Unset`. Dit betekent dat de dataverwerking is uitgevoerd zonder interne serverfout. Hieronder vallen dataverwerkingen met een HTTP-status in de reeks `200–399` (zoals succesvol ophalen van gegevens, ook als het resultaat leeg is), en ook client-side fouten met een HTTP-status in de reeks `400–499` (zoals ongeldige input of ontbrekende parameters). <br>
-* `1: STATUS_CODE_OK`: De waarde `Ok` kan optioneel gebruikt worden wanneer de ontwikkelaar expliciet wil markeren dat de dataverwerking succesvol is afgerond. Dit is afhankelijk van hoe de organisatie een dataverwerking als succesvol ziet en of ze dit expliciet willen loggen als een andere waarde dan `Unset`. <br>
-* `2: STATUS_CODE_ERROR`: Bij server-side fouten tijdens een dataverwerking (zoals HTTP-statuscodes in de 5xx-reeks) wordt de waarde `Error` toegekend.
+* `0: STATUS_CODE_UNSET`: De standaardwaarde voor elke `status_code` is `Unset`. Dit betekent dat de dataverwerking is uitgevoerd zonder interne fout. Deze waarde wordt toegepast wanneer de dataverwerking technisch correct is afgerond, ook als er geen resultaat beschikbaar is of wanneer de invoer onvolledig was. <br>
+* `1: STATUS_CODE_OK`: De waarde `Ok` kan optioneel gebruikt worden wanneer de ontwikkelaar expliciet wil markeren dat de dataverwerking succesvol is afgerond. Dit is afhankelijk van hoe de organisatie die de standaard implementeert een dataverwerking als succesvol definieert en of zij dit onderscheid expliciet willen loggen als andere waarde dan `Unset`.
+* `2: STATUS_CODE_ERROR`: De waarde `Error` wordt toegekend bij fouten die zijn ontstaan binnen het systeem dat de verwerking uitvoert, zoals interne fouten of mislukte uitvoeringen door technische oorzaken.
 
-Ter verduidelijking: de waarden `Unset` en `Error` worden altijd gebruikt afhankelijk van het resultaat van de dataverwerking. De waarde `Ok` is optioneel en kan door de organisatie die de standaard implementeert worden toegekend wanneer zij een verwerking expliciet als succesvol willen markeren.
+Ter verduidelijking: De waarden `Unset` en `Error` worden altijd bepaald op basis van het resultaat van de verwerking. De waarde `Ok` is optioneel en kan gebruikt worden als de organisatie ervoor kiest dataverwerkingen expliciet als succesvol te markeren.
 
 Het veld `foreign_operation` is een `message`, opgebouwd uit de volgende velden:
 
