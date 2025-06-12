@@ -14,7 +14,7 @@ Dataverwerkingen in het Logboek zelf worden *niet* gelogd in een Logboek Dataver
 
 ## Register
 <div class="note" title="Toelichting verwerkingsactiviteiten zijn niet gestandaardiserd">
-  <p>Let op: De standaard beschrijft géén vaste structuur of interface voor het register van verwerkingsactiviteiten.</p>
+  <p>Let op: De standaard beschrijft géén vaste structuur of interface voor het register van verwerkingsactiviteiten. De inrichting van het register van verwerkingsactiviteiten verschilt per organisatie en maakt géén onderdeel uit van deze standaard.</p>
 </div>
 
 Een {{Register}} bevat statische informatie over Dataverwerkingen. Elk record in een Register heeft een unieke identificatiecode waarmee de Verwerkingsactiviteit kan worden aangeduid. Deze identificatiecode wordt gebruikt om vanuit een Logregel te linken naar aanvullende informatie in een Register.
