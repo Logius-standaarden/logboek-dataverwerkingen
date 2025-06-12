@@ -13,6 +13,9 @@ Een {{Logboek}} is een Applicatie met een specifieke rol in de context van deze 
 Dataverwerkingen in het Logboek zelf worden *niet* gelogd in een Logboek Dataverwerkingen, dit zou een oneindige recursiviteit veroorzaken.
 
 ## Register
+<div class="note" title="Toelichting verwerkingsactiviteiten zijn niet gestandaardiserd">
+  <p>Let op: De standaard beschrijft géén vaste structuur of interface voor het register van verwerkingsactiviteiten.</p>
+</div>
 
 Een {{Register}} bevat statische informatie over Dataverwerkingen. Elk record in een Register heeft een unieke identificatiecode waarmee de Verwerkingsactiviteit kan worden aangeduid. Deze identificatiecode wordt gebruikt om vanuit een Logregel te linken naar aanvullende informatie in een Register.
 
