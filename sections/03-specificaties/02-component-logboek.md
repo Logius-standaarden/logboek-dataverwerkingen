@@ -45,9 +45,11 @@ Het veld `foreign_operation` is een `message`, opgebouwd uit de volgende velden:
 
 Deze velden worden optioneel aangeboden door een aanroepende Applicatie, zie de specificatie van het [gedrag van Applicaties](#gedrag).
 
-Het veld `resource` is een bericht, opgebouwd uit het volgende veld:
+Het veld `resource` is een object, opgebouwd uit de volgende velden:
 
-* `attributes`: Lijst attributen in de vorm van *KeyValue pairs*. De organisatie kan deze lijst gebruiken om een systeem, applicatie of component aan te duiden op een manier die binnen de organisatie gebruikelijk is. Dit zijn bijvoorbeeld naam en versienummer van een applicatie, of een verwijzing naar een record in een [CMDB](https://www.hci-itil.com/ITIL_v3/books/3_service_transition/service_transition_ch4_3.html).
+| Veldnaam   | Type | Omschrijving |
+|------------|------|--------------|
+| attributes | Any  | Een lijst van key-value pairs die gebruikt kunnen worden om een systeem, applicatie of component aan te duiden op een manier die binnen de organisatie gebruikelijk is. Denk hierbij aan zaken als naam en versienummer van een applicatie, of een verwijzing naar een record in een [CMDB](https://www.hci-itil.com/ITIL_v3/books/3_service_transition/service_transition_ch4_3.html)|
 
 Het veld `attributes` is een lijst van *key-value pairs*, in een namespace met prefix `dpl.` (data processing log). De volgende attributen zijn mogelijk in de namespace `core`:
 
