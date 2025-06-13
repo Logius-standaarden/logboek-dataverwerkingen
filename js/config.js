@@ -8,6 +8,7 @@ var respecConfig = {
   publishVersion: "0.8.0",
   // TODO: verwijder voor publicatie
   latestVersion: "https://logius-standaarden.github.io/logboek-dataverwerkingen/",
+  prevVersion: [],
   
   edDraftURI: "https://logius-standaarden.github.io/logboek-dataverwerkingen/",
 
