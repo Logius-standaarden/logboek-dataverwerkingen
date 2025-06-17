@@ -49,7 +49,7 @@ Het veld `resource` is een object, opgebouwd uit de volgende velden:
 
 | Veldnaam   | Type | Omschrijving |
 |------------|------|--------------|
-| attributes | Any  | Een lijst van key-value pairs die gebruikt kunnen worden om een systeem, applicatie of component aan te duiden op een manier die binnen de organisatie gebruikelijk is. Denk hierbij aan zaken als naam en versienummer van een applicatie, of een verwijzing naar een record in een [CMDB](https://www.hci-itil.com/ITIL_v3/books/3_service_transition/service_transition_ch4_3.html).|
+| attributes | Any  | Een object met velden dat gebruikt wordt om een systeem, applicatie of component aan te duiden op een manier die binnen de organisatie gebruikelijk is. Denk hierbij aan velden als naam en versienummer van een applicatie, of een verwijzing naar een record in een [CMDB](https://www.hci-itil.com/ITIL_v3/books/3_service_transition/service_transition_ch4_3.html).|
 
 Het veld `attributes` is een object, opgebouwd uit de volgende velden:
 
