@@ -48,7 +48,11 @@ Het veld `attributes` is een object, opgebouwd uit velden in een namespace met p
 | dpl.core.data_subject_id        | String | Unieke, versleutelde identificerende code van de Betrokkene. |
 | dpl.core.data_subject_id_type   | String | Type van de identificerende code, zoals BSN, personeelsnummer, of een URI naar een Register dat het type specificeert. |
 
-De volgende velden in de namespace `core` zijn enkel vereist als er een aanroepende Applicatie is, zie de specificatie van het [gedrag van Applicaties](#gedrag).
+<!-- markdownlint-disable link-fragments -->
+
+De volgende velden in de namespace `core` zijn enkel vereist als er een aanroepende Applicatie is, zie de specificatie van het [gedrag van Applicaties](#gedrag-0).
+
+<!-- markdownlint-enable link-fragments -->
 
 | Veldnaam                             | Type    | Omschrijving |
 |--------------------------------------|---------|--------------|
