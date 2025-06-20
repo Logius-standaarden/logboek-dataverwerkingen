@@ -58,7 +58,7 @@ De volgende velden in de namespace `core` zijn enkel vereist als er een aanroepe
 |--------------------------------------|---------|--------------|
 | dpl.core.foreign_operation.trace_id  | 16 byte | Unieke identificerende code van *Trace* bij externe partij |
 | dpl.core.foreign_operation.span_id   |  8 byte | Unieke identificerende code van de *Actie* bij externe partij |
-| dpl.core.foreign_operation.processor | URL     | Link naar website van externe partij. Op deze website moet het bestand `<URL>/.well-known/privacy.text` gepubliceerd zijn |
+| dpl.core.foreign_operation.processor | URL     | Link naar website van externe partij |
 
 Om traces te kunnen relateren aan elkaar is de URL een locator link naar de externe partij. Om vervolgens contactgegevens van deze externe partij op te halen, MOET `<URL>/.well-known/privacy.text` beschikbaar zijn en hier bijvoorbeeld een emailadres of telefoonnummer in staan.
 
