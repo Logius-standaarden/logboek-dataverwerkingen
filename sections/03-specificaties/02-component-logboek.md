@@ -60,7 +60,7 @@ Om traces te kunnen relateren aan elkaar is de URL een locator link naar de exte
 
 <aside class="example">
 
-Als een gemeente een applicatie van de RDW aanroept, moet de RDW `dpl.core.foreign_operation.processor` zetten op <code>https://gemeente.nl</code>. Vervolgens moet <code>https://gemeente.nl/.well-known/privacy.txt</code> resulteren in een tekst bestand waar contactgegevens instaan van de verwerkingsverantwoordelijke van de gemeente.
+Als een gemeente een applicatie van de RDW aanroept, moet de RDW `dpl.core.foreign_operation.processor` zetten op <pre><code>https://gemeente.nl</code></pre>. Vervolgens moet <pre><code>https://gemeente.nl/.well-known/privacy.txt</code></pre> resulteren in een tekst bestand waar contactgegevens instaan van de verwerkingsverantwoordelijke van de gemeente.
 
 </aside>
 
