@@ -19,7 +19,7 @@ Op basis van metadata die tussen Applicaties wordt uitgewisseld is het mogelijk 
 
 Registers bevatten statische informatie waar vanuit Logregels naar verwezen kan worden voor extra informatie over een Dataverwerking.
 
-![architecture](diagrams/architecture-context.svg "Componenten in context")
+![architecture](media/architecture-context.svg "Componenten in context")
 
 De standaard beschrijft de interfaces (in het diagram aangeduid met groene lijnen), en het gedrag van de componenten voor zover relevant om technisch interoperabel te worden.
 
