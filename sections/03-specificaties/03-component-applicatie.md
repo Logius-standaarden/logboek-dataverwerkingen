@@ -18,7 +18,11 @@ De Applicatie ***MOET*** voor iedere actie (`span_id`) een logregel wegschrijven
 
 De Applicatie ***MOET*** bijhouden of een actie geslaagd of mislukt is en dit per Dataverwerking als status (`status_code`) meegeven in de Logregel.
 
-Als de Applicatie een verzoek van een andere Applicatie kan ontvangen, ***MOET*** de Applicatie metadata volgens de W3C Trace Context standaard kunnen verwerken en gebruiken in de eigen Trace(s). Metadata verkregen via W3C Trace Context ***MOET*** als `foreign_operation` worden opgenomen in de Logregel.
+<!-- markdownlint-disable link-fragments -->
+
+Als de Applicatie een verzoek van een andere Applicatie kan ontvangen, ***MOET*** de Applicatie metadata volgens de W3C Trace Context standaard kunnen verwerken en gebruiken in de eigen Trace(s). Metadata verkregen via W3C Trace Context ***MOET*** in `attributes` meegenomen worden als velden die beginnen met `dpl.core.foreign_operation`. Zie de [specificatie van het logboek](#interface) voor de lijst van velden.
+
+<!-- markdownlint-enable link-fragments -->
 
 Als de Applicatie een verzoek aan een andere Applicatie kan versturen, ***MOET*** de Applicatie metadata volgens de W3C Trace Context standaard meegeven aan dit verzoek.
 
