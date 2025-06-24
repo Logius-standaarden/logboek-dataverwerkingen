@@ -60,14 +60,6 @@ De volgende velden in de namespace `core` zijn enkel vereist als er een aanroepe
 | dpl.core.foreign_operation.span_id   |  8 byte | Unieke identificerende code van de *Actie* bij externe partij |
 | dpl.core.foreign_operation.processor | URL     | Link naar website van externe partij |
 
-Om traces te kunnen relateren aan elkaar is de URL een locator link naar de externe partij. Om vervolgens contactgegevens van deze externe partij op te halen, MOET `<URL>/.well-known/privacy.text` beschikbaar zijn en hier bijvoorbeeld een emailadres of telefoonnummer in staan.
-
-<aside class="example">
-
-Als een gemeente een applicatie van de RDW aanroept, moet de RDW `dpl.core.foreign_operation.processor` zetten op `https://gemeente.nl`. Vervolgens moet `https://gemeente.nl/.well-known/privacy.txt` resulteren in een tekst bestand waar contactgegevens instaan van de verwerkingsverantwoordelijke van de gemeente.
-
-</aside>
-
 <div class="note">
 
 Extensies mogen attributen in andere namespaces definieren. Hiervoor gelden de [[[logboek-extensie-guideline]]] richtlijnen. Extensies moeten vastgesteld zijn, alvorens een attribuut mag worden gebruikt. Dit om te voorkomen dat niet-gestandaardiseerde namespaces worden gebruikt en er geen eenduidig gebruik van attributen ontstaat.
