@@ -24,7 +24,11 @@ De interface ***MOET*** de volgende velden implementeren:
 | `resource`            | object         | optioneel     | Zie toelichting hieronder |
 | `attributes`          | object         | verplicht     | Zie toelichting hieronder |
 
+### `span_id`
+
 Het veld `span_id` is in implementaties voor logging.
+
+### `status_code`
 
 Het veld `status_code` is een enumeratie die de volgende waarden kan bevatten:
 
@@ -34,11 +38,15 @@ Het veld `status_code` is een enumeratie die de volgende waarden kan bevatten:
 
 De waarden `Unset` en `Ok` worden altijd bepaald op basis van het resultaat van de verwerking. De waarde `Ok` is optioneel en kan gebruikt worden als de organisatie ervoor kiest dataverwerkingen expliciet als succesvol te markeren. `Error` is alleen nodig als er een fout is opgetreden bij het interne proces. Een dataverwerking die niet klopt op basis van de gegeven gebruikersinput, maar die zonder fouten is afgehandeld, hoort dus status `Unset` te krijgen.
 
+### `resource`
+
 Het veld `resource` is een object, opgebouwd uit de volgende velden:
 
 | Veldnaam   | Type | Omschrijving |
 |------------|------|--------------|
 | attributes | Any  | Een object met velden dat gebruikt wordt om een systeem, applicatie of component aan te duiden op een manier die binnen de organisatie gebruikelijk is. Denk hierbij aan velden als naam en versienummer van een applicatie, of een verwijzing naar een record in een [CMDB](https://www.hci-itil.com/ITIL_v3/books/3_service_transition/service_transition_ch4_3.html).|
+
+### `attributes`
 
 Het veld `attributes` is een object, opgebouwd uit velden in een namespace met prefix `dpl` (data processing log). De volgende velden zijn vereist in de namespace `core`:
 
