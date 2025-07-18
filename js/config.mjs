@@ -1,4 +1,6 @@
-var respecConfig = {
+import { loadRespecWithConfiguration } from "https://logius-standaarden.github.io/publicatie/respec/organisation-config.mjs";
+
+loadRespecWithConfiguration({
   maxTocLevel: 3,
   specStatus: "WV",
   specType: "ST",
@@ -9,7 +11,7 @@ var respecConfig = {
   // TODO: verwijder voor publicatie
   latestVersion: "https://logius-standaarden.github.io/logboek-dataverwerkingen/",
   prevVersion: [],
-  
+
   edDraftURI: "https://logius-standaarden.github.io/logboek-dataverwerkingen/",
 
   editors: [
@@ -53,12 +55,12 @@ var respecConfig = {
   ],
 
   github: "https://github.com/Logius-standaarden/logboek-dataverwerkingen",
-  
+
   // Create PDF and link to file in header (optional):
   alternateFormats: [
     {
-        label: "pdf",
-        uri: "logboek-dataverwerkingen.pdf",
+      label: "pdf",
+      uri: "logboek-dataverwerkingen.pdf",
     },
   ],
-};
+});
