@@ -64,7 +64,6 @@ De volgende velden in de namespace `core` zijn enkel vereist als er een aanroepe
 
 | Veldnaam                             | Type    | Omschrijving |
 |--------------------------------------|---------|--------------|
-| dpl.core.foreign_operation.trace_id  | 16 byte | Unieke identificerende code van *Trace* bij externe partij |
 | dpl.core.foreign_operation.span_id   |  8 byte | Unieke identificerende code van de *Actie* bij externe partij |
 | dpl.core.foreign_operation.processor | URL     | Link naar website van externe partij |
 
