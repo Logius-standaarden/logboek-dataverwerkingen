@@ -12,7 +12,7 @@ Een zogenaamde {{Verwerker}} die Dataverwerkingen uitvoert in opdracht van een V
 
 ## Geen inhoudelijke uitwisseling tussen Verantwoordelijken
 
-Er wordt met de standaard geen inhoudelijke informatie over Dataverwerkingen uitgewisseld tussen Verantwoordelijken. Dit is niet nodig, aangezien iedere Verantwoordelijke alleen Logregels over eigen Dataverwerkingen vastlegt. De informatie die wordt uitgewisseld is beperkt tot zogenaamde {{Trace}}-informatie waarmee Logregels van de ene Verantwoordelijke gerelateerd kunnen worden aan Logregels bij de andere Verantwoordelijke.
+Er wordt met de standaard geen inhoudelijke informatie over Dataverwerkingen uitgewisseld tussen Verantwoordelijken. Dit is niet nodig, aangezien iedere Verantwoordelijke alleen Logregels over eigen Dataverwerkingen vastlegt. De informatie die wordt uitgewisseld is beperkt tot zogenaamde {{Trace}}-informatie waarmee Logregels van de ene Verantwoordelijke gerelateerd kunnen worden aan Logregels bij de andere Verantwoordelijke. De verwerker krijgt als `trace_id` de `trace_id` van de verantwoordelijke, terwijl `foreign_span_id` wordt opgeslagen. De verwerker krijgt een eigen `span_id` per activiteit.
 
 ![architecture](media/architecture-grenzen.svg "Context Dataverwerking meegeven over Grenzen")
 
