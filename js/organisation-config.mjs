@@ -645,23 +645,27 @@ export function loadRespecWithConfiguration(localConfig) {
     ...localConfig.localBiblio,
   };
 
-  respecConfig.preProcess.push((config, document, utils) => {
-    if (!config.alternateFormats) {
-      config.alternateFormats = [];
-    }
-    const pdfName = `${config.pubDomain}-${config.shortName}-${config.publishVersion}.pdf`;
-    const existingFormat = config.alternateFormats.find(format => format.label === 'pdf');
-    if (existingFormat) {
-      if (existingFormat !== pdfName) {
-        utils.showError(`Invalid name for PDF format. Expected "${pdfName}", but got "${existingFormat}"`);
+  respecConfig.preProcess = [
+    ...(localConfig.preProcess || []),
+    (config, document, utils) => {
+      if (!config.alternateFormats) {
+        config.alternateFormats = [];
       }
-      return;
+      const pdfName = `${config.pubDomain}-${config.shortName}-${config.publishVersion}.pdf`;
+      const existingFormat = config.alternateFormats.find(format => format.label === 'pdf');
+      if (existingFormat) {
+        if (existingFormat.uri !== pdfName) {
+          utils.showError(`Invalid name for PDF format. Expected "${pdfName}", but got "${existingFormat.uri}".
+            Consider removing the PDF format from 'config.alternateFormats', as it is automatically generated already.`);
+        }
+        return;
+      }
+      config.alternateFormats.push({
+        label: 'pdf',
+        uri: pdfName,
+      });
     }
-    config.alternateFormats.push({
-      label: 'pdf',
-      uri: pdfName,
-    });
-  })
+  ];
 
   globalThis.respecConfig = respecConfig;
 
