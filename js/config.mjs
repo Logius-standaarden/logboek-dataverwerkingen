@@ -55,12 +55,4 @@ loadRespecWithConfiguration({
   ],
 
   github: "https://github.com/Logius-standaarden/logboek-dataverwerkingen",
-
-  // Create PDF and link to file in header (optional):
-  alternateFormats: [
-    {
-      label: "pdf",
-      uri: "logboek-dataverwerkingen.pdf",
-    },
-  ],
 });
