@@ -1,0 +1,305 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Processing Actitivities Register API v0.1"
+  },
+  "paths": {
+    "/processing_activities/{processing_activity_id}": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/processing_activity_id"
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProcessingActivity"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/processing_activities/{processing_activity_id}/versions/{processing_activity_version_number}": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/processing_activity_id"
+        },
+        {
+          "$ref": "#/components/parameters/processing_activity_version_number"
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProcessingActivityVersion"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/entities/{entity_id}": {
+      "parameters": [
+        {
+          "$ref": "#/components/parameters/entity_id"
+        }
+      ],
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Entity"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ProcessingActivity": {
+        "properties": {
+          "active": {
+            "description": "If the latest version is still valid",
+            "type": "boolean"
+          },
+          "latest_version": {
+            "description": "The latest valid version of ProcessingActivityVersion",
+            "type": "number"
+          },
+          "processing_activity_id": {
+            "description": "Uuid of this resource",
+            "type": "string",
+            "format": "uuid"
+          }
+        }
+      },
+      "ProcessingActivityVersion": {
+        "properties": {
+          "data_subjects": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "Adult",
+                "Applicant",
+                "Citizen",
+                "Consumer",
+                "Customer",
+                "DataSubject",
+                "Employee",
+                "GuardianOfHuman",
+                "Immigrant",
+                "JobApplicant",
+                "Member",
+                "NonCitizen",
+                "ParentOfHuman",
+                "Participant",
+                "Patient",
+                "Student",
+                "Subscriber",
+                "Tourist",
+                "User",
+                "Visitor",
+                "VulnerableHuman"
+              ]
+            }
+          },
+          "legal_basis": {
+            "description": "LegalBasis as defined in https://w3c.github.io/dpv/2.1/dpv/modules/legal_basis.html",
+            "type": "array",
+            "items": {
+              "enum": [
+                "Consent",
+                "Contract",
+                "DataTransferLegalBasis",
+                "LegalObligation",
+                "LegitimateInterest",
+                "OfficialAuthorityOfController",
+                "PublicInterest",
+                "VitalInterest"
+              ]
+            }
+          },
+          "measures": {
+            "description": "Measures as defined in https://w3c.github.io/dpv/2.1/dpv/modules/TOM.html",
+            "type": "array",
+            "items": {
+              "properties": {
+                "measureType": {
+                  "enum": ["Organisational", "Technical"]
+                },
+                "measure": {
+                  "type": "string"
+                },
+                "risks": {
+                  "type": "array",
+                  "items": {
+                    "properties": {
+                      "assessment": {
+                        "description": "Link to a risk assessment document related to this measure",
+                        "type": "string",
+                        "format": "uri"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "name": {
+            "description": "Description of the processing activity (can be changed between different versions)",
+            "type": "string"
+          },
+          "personal_data": {
+            "properties": {
+              "categories": {
+                "description": "Categories of data that is collected about data_subjects",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "retentionPeriod": {
+                "type": "string",
+                "format": "duration"
+              }
+            }
+          },
+          "processing_activity_version_number": {
+            "description": "Version number of this resource",
+            "type": "number"
+          },
+          "processing_options": {
+            "description": "ProcessingOperation as defined in https://w3c.github.io/dpv/2.1/dpv/modules/processing.html",
+            "type": "array",
+            "items": {
+              "enum": [
+                "Copy",
+                "Disclose",
+                "Obtain",
+                "Organise",
+                "Remove",
+                "Store",
+                "Transfer",
+                "Transform",
+                "Use"
+              ]
+            }
+          },
+          "purpose": {
+            "description": "Purpose as defined in https://w3c.github.io/dpv/2.1/dpv/modules/purposes.html",
+            "type": "string"
+          },
+          "recipients": {
+            "properties": {
+              "legal_role": {
+                "description": "LegalRole as defined in https://w3c.github.io/dpv/2.1/dpv/modules/entities.html#vocab-entities-legalrole",
+                "enum": [
+                  "DataController",
+                  "DataExporter",
+                  "DataImporter",
+                  "DataProcessor",
+                  "DataProtectionOfficer",
+                  "JointDataControllers",
+                  "ServiceConsumer",
+                  "ServiceProvider",
+                  "ThirdParty"
+                ]
+              },
+              "entity_id": {
+                "description": "Reference to the entity",
+                "type": "string",
+                "format": "uuid"
+              }
+            }
+          },
+          "valid_from": {
+            "description": "Timestamp at which this version is valid, invalidating any previous version",
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "Entity": {
+        "description": "Entity as defined in https://w3c.github.io/dpv/2.1/dpv/modules/entities.html",
+        "properties": {
+          "entity_type": {
+            "enum": [
+              "LegalEntity",
+              "NaturalPerson",
+              "Organisation"
+            ]
+          },
+          "entity_id": {
+            "description": "Uuid of this resource",
+            "type": "string",
+            "format": "uuid"
+          },
+          "name": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "phonenumber": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          }
+        }
+      }
+    },
+    "parameters": {
+      "entity_id": {
+        "name": "entity_id",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "format": "uuid"
+        }
+      },
+      "processing_activity_id": {
+        "name": "processing_activity_id",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "format": "uuid"
+        }
+      },
+      "processing_activity_version_number": {
+        "name": "processing_activity_version_number",
+        "in": "path",
+        "required": true,
+        "schema": {
+          "type": "number"
+        }
+      }
+    }
+  }
+}
