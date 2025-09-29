@@ -4,10 +4,10 @@
     "title": "Processing Actitivities Register API v0.1"
   },
   "paths": {
-    "/processing_activities/{processing_activity_id}": {
+    "/processing_activities/{processingActivityId}": {
       "parameters": [
         {
-          "$ref": "#/components/parameters/processing_activity_id"
+          "$ref": "#/components/parameters/processingActivityId"
         }
       ],
       "get": {
@@ -24,13 +24,13 @@
         }
       }
     },
-    "/processing_activities/{processing_activity_id}/versions/{processing_activity_version_number}": {
+    "/processing_activities/{processingActivityId}/versions/{processingActivityVersionNumber}": {
       "parameters": [
         {
-          "$ref": "#/components/parameters/processing_activity_id"
+          "$ref": "#/components/parameters/processingActivityId"
         },
         {
-          "$ref": "#/components/parameters/processing_activity_version_number"
+          "$ref": "#/components/parameters/processingActivityVersionNumber"
         }
       ],
       "get": {
@@ -47,10 +47,10 @@
         }
       }
     },
-    "/entities/{entity_id}": {
+    "/entities/{entityId}": {
       "parameters": [
         {
-          "$ref": "#/components/parameters/entity_id"
+          "$ref": "#/components/parameters/entityId"
         }
       ],
       "get": {
@@ -76,11 +76,11 @@
             "description": "If the latest version is still valid",
             "type": "boolean"
           },
-          "latest_version": {
+          "latestVersion": {
             "description": "The latest valid version of ProcessingActivityVersion",
             "type": "number"
           },
-          "processing_activity_id": {
+          "id": {
             "description": "Uuid of this resource",
             "type": "string",
             "format": "uuid"
@@ -89,7 +89,7 @@
       },
       "ProcessingActivityVersion": {
         "properties": {
-          "data_subjects": {
+          "dataSubjects": {
             "type": "array",
             "items": {
               "enum": [
@@ -117,7 +117,7 @@
               ]
             }
           },
-          "legal_basis": {
+          "legalBasis": {
             "description": "LegalBasis as defined in https://w3c.github.io/dpv/2.1/dpv/modules/legal_basis.html",
             "type": "array",
             "items": {
@@ -163,7 +163,7 @@
             "description": "Description of the processing activity (can be changed between different versions)",
             "type": "string"
           },
-          "personal_data": {
+          "personalData": {
             "properties": {
               "categories": {
                 "description": "Categories of data that is collected about data_subjects",
@@ -178,11 +178,11 @@
               }
             }
           },
-          "processing_activity_version_number": {
+          "version": {
             "description": "Version number of this resource",
             "type": "number"
           },
-          "processing_options": {
+          "processingOptions": {
             "description": "ProcessingOperation as defined in https://w3c.github.io/dpv/2.1/dpv/modules/processing.html",
             "type": "array",
             "items": {
@@ -205,7 +205,7 @@
           },
           "recipients": {
             "properties": {
-              "legal_role": {
+              "legalRole": {
                 "description": "LegalRole as defined in https://w3c.github.io/dpv/2.1/dpv/modules/entities.html#vocab-entities-legalrole",
                 "enum": [
                   "DataController",
@@ -219,14 +219,14 @@
                   "ThirdParty"
                 ]
               },
-              "entity_id": {
+              "entityId": {
                 "description": "Reference to the entity",
                 "type": "string",
                 "format": "uuid"
               }
             }
           },
-          "valid_from": {
+          "validFrom": {
             "description": "Timestamp at which this version is valid, invalidating any previous version",
             "type": "string",
             "format": "date-time"
@@ -236,14 +236,14 @@
       "Entity": {
         "description": "Entity as defined in https://w3c.github.io/dpv/2.1/dpv/modules/entities.html",
         "properties": {
-          "entity_type": {
+          "type": {
             "enum": [
               "LegalEntity",
               "NaturalPerson",
               "Organisation"
             ]
           },
-          "entity_id": {
+          "id": {
             "description": "Uuid of this resource",
             "type": "string",
             "format": "uuid"
@@ -274,8 +274,8 @@
       }
     },
     "parameters": {
-      "entity_id": {
-        "name": "entity_id",
+      "entityId": {
+        "name": "entityId",
         "in": "path",
         "required": true,
         "schema": {
@@ -283,8 +283,8 @@
           "format": "uuid"
         }
       },
-      "processing_activity_id": {
-        "name": "processing_activity_id",
+      "processingActivityId": {
+        "name": "processingActivityId",
         "in": "path",
         "required": true,
         "schema": {
@@ -292,8 +292,8 @@
           "format": "uuid"
         }
       },
-      "processing_activity_version_number": {
-        "name": "processing_activity_version_number",
+      "processingActivityVersionNumber": {
+        "name": "processingActivityVersionNumber",
         "in": "path",
         "required": true,
         "schema": {
