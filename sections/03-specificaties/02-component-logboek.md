@@ -16,7 +16,7 @@ De interface ***MOET*** de volgende velden implementeren:
 |-----------------------|----------------|---------------|--------------|
 | `trace_id`            | 16 byte        | verplicht     | Unieke identificerende code van {{Trace}} die {{Dataverwerking}} volgt |
 | `span_id`             |  8 byte        | verplicht     | Unieke identificerende code van {{Actie}} binnen de Dataverwerking |
-| `status`         | enum           | verplicht     | Status van de Actie |
+| `status`              | enum           | verplicht     | Status van de Actie |
 | `name`                | string         | verplicht     | Naam van de specifieke Actie binnen de Dataverwerking |
 | `start_time`          | timestamp (ms) | verplicht     | Tijdstip waarop de Actie gestart is |
 | `end_time`            | timestamp (ms) | verplicht     | Tijdstip waarop de Actie beëindigd is |
