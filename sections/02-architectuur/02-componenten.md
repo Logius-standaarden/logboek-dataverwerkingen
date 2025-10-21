@@ -14,10 +14,6 @@ Dataverwerkingen in het Logboek zelf worden *niet* gelogd in een Logboek Dataver
 
 ## Register
 
-<div class="note" title="Verwerkingsactiviteiten zijn niet gestandaardiseerd">
-  <p>Let op: De standaard beschrijft géén vaste structuur of interface voor het register van verwerkingsactiviteiten. De inrichting van het register van verwerkingsactiviteiten verschilt per organisatie en maakt géén onderdeel uit van deze standaard.</p>
-</div>
-
 Een {{Register}} bevat statische informatie over Dataverwerkingen. Elk record in een Register heeft een unieke identificatiecode waarmee de Verwerkingsactiviteit kan worden aangeduid. Deze identificatiecode wordt gebruikt om vanuit een Logregel te linken naar aanvullende informatie in een Register.
 
 Het Register kan een Applicatie zijn, in dat geval is het een Applicatie met een specifieke rol in de context van deze standaard. Eventueel kan het ook een Register in de vorm van een document zijn.
@@ -32,3 +28,6 @@ Verwerkingsactiviteiten waarin geen persoonsdata worden verwerkt staan niet verp
 * Zelf een ander Register opzetten met gelijke interface maar specifiek voor Verwerkingsactiviteiten zonder persoonsdata
 
 Het is daarnaast ook mogelijk om Registers te gebruiken met heel andere statische informatie die meer context geeft over een Logregel, bijv. informatie over de gebruikte beslisregels of van toepassing zijnde normen. Dit wordt niet verder uitgewerkt.
+
+<p class="note">Op dit moment is er geen specificatie voor het ontsluiten van een {{Register}} met een API.
+Hier zal een toekomstige versie van de standaard wel in voorzien.
