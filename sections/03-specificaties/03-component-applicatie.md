@@ -16,7 +16,7 @@ Als een Dataverwerking meerdere Betrokkenen heeft dan ***MOET*** de applicatie v
 
 De Applicatie ***MOET*** voor iedere actie (`span_id`) een logregel wegschrijven via de interface van het Logboek.
 
-De Applicatie ***MOET*** bijhouden of een actie geslaagd of mislukt is en dit per Dataverwerking als status (`status_code`) meegeven in de Logregel.
+De Applicatie ***MOET*** bijhouden of een actie geslaagd of mislukt is en dit per Dataverwerking als status (`status`) meegeven in de Logregel.
 
 <!-- markdownlint-disable link-fragments -->
 
