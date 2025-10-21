@@ -55,4 +55,14 @@ loadRespecWithConfiguration({
   ],
 
   github: "https://github.com/Logius-standaarden/logboek-dataverwerkingen",
+
+  localBiblio: {
+    NEN7513: {
+      authors: ["Normcommissie Informatievoorziening in de zorg"],
+      date: "December 2024",
+      href: "https://www.nen.nl/nen-7513-2024-nl-329182",
+      publisher: "NEN",
+      title: "Medische informatica - Logging - Vastleggen van acties op persoonlijke gezondheidsinformatie"
+    },
+  },
 });

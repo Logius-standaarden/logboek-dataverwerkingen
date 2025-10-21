@@ -81,19 +81,14 @@ Activiteiten die een organisatie onderkent heeft als activiteiten waarbinnen {{D
 ### Extensies
 
 De standaard Logboek Dataverwerkingen specificeert de basis voor het loggen en aan elkaar relateren van Dataverwerkingen.
-Aanvullende functionaliteit wordt gestandaardiseerd in `extensies`:
+Aanvullende functionaliteit wordt gestandaardiseerd in `extensies`, conform de [[[logboek-extensie-guideline]]] richtlijnen.
+Enkele voorbeelden van extensies (deze zijn nog niet per definitie vastgesteld):
 
-* *Extensie Betrokkenen*<br>
-  Met deze extensie wordt meer precies uitgewerkt hoe de identiteit van een {{Betrokkene}} wordt gerelateerd aan een verwerking, zodat actief informeren of het faciliteren van inzageverzoeken gestandaardiseerd mogelijk wordt. Dit is een nadere uitwerking van wat in de kern van de standaard al mogelijk is rond vastlegging van de {{Betrokkene}}.
+* [Extensie (geo)objecten](https://logius-standaarden.github.io/logboek-extensie-object/) <br>
+  Deze extensie specificeert hoe dataverwerkingen voor (geo)objecten kunnen worden vastgelegd en beheerd in een logboek.
 
-* *Extensie Verwerkte Data*<br>
-  Deze extensie specificeert een uniforme manier om verwerkte data in logregels op te nemen.
-
-* *Extensie Inzage*<br>
-  Deze extensie heeft een afhankelijkheid van de extensies *Betrokkenen* en *Verwerkte Data*, en biedt een interface op de logs vanuit een bepaald perspectief.
-
-* *Extensie (geo)objecten*<br>
-  Deze extensie specificeert hoe dataverwerkingen voor [objecten](https://geonovum.github.io/logboek-dataverwerkingen-voor-objecten/) kunnen worden vastgelegd en beheerd in een logboek.
+* [Concept-extensie zorg](https://logius-standaarden.github.io/logboek-extensie-nen7513/) <br>
+  Deze extensie was een proof-of-concept hoe dataverwerkingen die aan de [[?NEN7513]] norm kunnen worden vastgelegd en beheerd in een logboek.
 
 ### Profielen
 
