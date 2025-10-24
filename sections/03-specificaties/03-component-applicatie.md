@@ -43,3 +43,101 @@ Iedere Dataverwerking van persoonsdata betreft een Verwerkingsactiviteit die in 
 Dataverwerkingen zonder persoonsdata zijn over het algemeen niet als Verwerkingsactiviteit opgenomen in het Register van Verwerkingsactiviteiten. Het wordt aanbevolen om wel een soortgelijk register bij te houden voor alle Dataverwerkingen zonder persoonsdata.
 
 Het wordt ***AANBEVOLEN*** dat de Applicatie in de Logregel een verwijzing naar de juiste Verwerkingsactiviteit in een daarvoor aan te wijzen Register opneemt in het veld `dpl.core.processing_activity_id`.
+
+## Foutafhandeling
+
+Fouten kunnen in iedere applicatie optreden.
+Fouten kunnen ontstaan door bijvoorbeeld verkeerde invoer door de gebruiker, een fout in de software van de applicatie of een connectie met een andere applicatie die niet werkt.
+Deze sectie geeft een handreiking ten aanzien van de afhandeling van foutsituaties met betrekking tot het gebruik van het Logboek Dataverwerkingen.
+
+<p class="note">Let op: wanneer een gebruiker een verwerking bewust afbreekt, wordt dit niet als een fout beschouwd.
+Het is aan te raden om dit als een expliciete stap in het proces op te nemen, zodat ook deze handeling kan worden gelogd.
+In zulke gevallen is de `status` van de verwerking `Ok`, omdat er sprake is van een verwachte en correcte actie van de gebruiker.
+
+### Uitgangspunten registratie foutsituaties
+
+De volgende punten zijn belangrijk in het ontwerpen en implementeren van de registratie van foutsituaties in relatie tot het Logboek Dataverwerkingen:
+
+* Gebruik zoveel mogelijk de standaardfoutmethodes van de gebruikte ontwikkeltaal en/of SDKs.
+
+* Foutdata moeten worden gerelateerd aan een `trace_id` en `span_id`.
+
+* De software van de applicatie die de registratie van de logdata registreert, moet er voor zorgen dat er geen fout optreedt in 'run-time'.
+Bijvoorbeeld als `name` leeg is, moet deze automatisch worden gevuld met een waarde zodat er in ieder geval op dit punt geen fout kan optreden.
+
+### Locatie van opslag
+
+De foutsituatie kan zowel in het Logboek als in een extern component worden registreerd.
+Beiden hebben voor- en nadelen:
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Locatie</th>
+      <th scope="col">Voordelen</th>
+      <th scope="col">Nadelen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>In het logboek</td>
+      <td>
+        <ul>
+          <li>Fouten zijn te herkennen door <code>status</code> (=error).</li>
+          <li>Fouten worden apart geregistreerd als transactie, waardoor succesvolle en gefaalde transacties aan elkaar gerelateerd kunnen worden.</li>
+      </td>
+      <td>
+        <ul>
+          <li>Er moet een trigger zijn, zodat de beheerder ingelicht wordt dat er een foutsituatie is ontstaan.</li>
+          <li>Als er een grote hoeveelheid logregels zijn, kost het zoeken meer computatiewerk.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>In een extern component</td>
+      <td>
+        <ul>
+          <li>Alle foutsituaties staan gecentraliseerd opgeslagen waardoor monitoring op fouten eenvoudiger is.</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Foutsituaties moeten worden geregistreerd inclusief <code>trace_id</code> en <code>span_id</code>.</li>
+          <li>Extra inspanning om de foutsituatie later te relateren.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Attributes
+
+Specifieke foutdata worden opgeslagen als velden in `attributes`:
+
+| Veldnaam             | Type     | Omschrijving                                                                |
+|----------------------|----------|-----------------------------------------------------------------------------|
+| exception.message    | String   | Tekstuele beschrijving van de fout                                          |
+| exception.type       | String   | Type foutmelding (idealiter een dynamische foutmelding)                     |
+| exception.stacktrace | String   | Volledige stacktrace (als dat mogelijk is, afhankelijk van programmeertaal) |
+
+<aside class="example">
+Een foutregistratie kan er als volgt uitzien:
+
+```json
+{
+  "trace_id": "7bba9f33312b3dabc8f8e90c7c61f194",
+  "span_id": "2a3f5c8d1e6b4a09",
+  "status": "error",
+  "name": "Database connection failure",
+  "start_time": "2025-03-09T20:21:00Z",
+  "end_time": "2025-03-09T20:23:00Z",
+  "parent_span_id": "",
+  "attributes": {
+    "exception.message": "HTTP 500 error processing /api/v1/orders",
+    "exception.type": "TimeoutException",
+    "exception.stacktrace": "TimeoutException: Database connection failed"
+  }
+}
+```
+
+</aside>
