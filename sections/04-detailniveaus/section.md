@@ -17,7 +17,7 @@ Dit kan wel op basis van de verwerkingsactiviteit ID.
 Voorbeeld referentie: er is informatie over het bezit van een auto opgevraagd.
 Dit register bevat informatie zoals BSN, Adres, Kenteken, Lease-contract, APK gekeurd.
 Er wordt hier niet verder gespecificeerd welke categorieën van informatie zijn opgevraagd.
-De {{Logregel}} bevat dus "Bezit van auto opgevraagd uit RDW-register: `dpl.core.processing_activity_id` &lt;&lt;UUID&gt;&gt;"
+De {{Logregel}} bevat dus "Bezit van auto opgevraagd uit RDW-register: `dpl.core.processing_activity_id` &lt;&lt;URI&gt;&gt;"
 
 #### Niveau 2: kolomverwijzing
 
@@ -28,7 +28,7 @@ Voorbeeld referentie: er is informatie over het bezit van een auto opgevraagd.
 Dit register bevat informatie zoals BSN, Adres, Kenteken, Lease-contract, APK gekeurd.
 De {{Dataverwerking}} betrof het BSN, Kenteken en APK gekeurd.
 Omdat de overige categorien niet werden gebruikt, zijn die ook niet gelogd.
-De {{Logregel}} bevat dus "Bezit van auto opgevraagd uit RDW-register: BSN, Kenteken, APK gekeurd, `dpl.core.processing_activity_id` &lt;&lt;UUID&gt;&gt;"
+De {{Logregel}} bevat dus "Bezit van auto opgevraagd uit RDW-register: BSN, Kenteken, APK gekeurd, `dpl.core.processing_activity_id` &lt;&lt;URI&gt;&gt;"
 
 #### Niveau 3: concrete data
 
@@ -39,7 +39,7 @@ Op dit niveau kan de gehele {{Dataverwerking}} worden gereconstrueerd.
 Voorbeeld referentie: er is informatie over het bezit van een auto opgevraagd.
 Dit register bevat informatie zoals BSN, Adres, Kenteken, Lease-contract, APK gekeurd.
 De {{Dataverwerking}} bevat de BSN, Kenteken en APK gekeurd met specifieke data.
-De {{Logregel}} bevat dus "Bezit van auto opgevraagd uit RDW-register: BSN 1234, Kenteken 1-ABC-23, APK gekeurd: ja, `dpl.core.processing_activity_id` &lt;&lt;UUID&gt;&gt;"
+De {{Logregel}} bevat dus "Bezit van auto opgevraagd uit RDW-register: BSN 1234, Kenteken 1-ABC-23, APK gekeurd: ja, `dpl.core.processing_activity_id` &lt;&lt;URI&gt;&gt;"
 
 ### Implicaties van niveaus
 
