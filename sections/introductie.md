@@ -1,6 +1,6 @@
 # Introductie
 
-De standaard Logboek Dataverwerkingen beschrijft een manier om technisch interoperabele functionaliteit voor het loggen van dataverwerkingen te implementeren, door voor de volgende functionaliteit de interface en het gedrag voor te schrijven:
+De standaard Logboek Dataverwerkingen beschrijft een manier om technisch interoperabele functionaliteit voor het loggen van {{Dataverwerkingen}} te implementeren, door voor de volgende functionaliteit de interface en het gedrag voor te schrijven:
 
 * het vastleggen van logs van dataverwerkingen
 * het aan elkaar relateren van logs van dataverwerkingen
@@ -24,13 +24,16 @@ Alle achterliggende overwegingen zijn te vinden in de [Algemene inleiding](https
 
 De volgende lijst beschrijft terminologie in de betekenis zoals deze wordt gebruikt in dit document.
 
+<p class="note">Sommige termen zijn in bredere context al bekend, zoals <a>Applicatie</a>.
+Deze sectie geeft een vernauwende definitie van deze termen om extra eisen te stellen.
+
 <dfn data-lt="Acties">Actie</dfn>
 
 Een {{Dataverwerking}} bestaat uit één of meerdere kleinere discrete stappen. Een Actie is één discrete stap binnen een Dataverwerking.
 
 <dfn data-lt="Applicaties">Applicatie</dfn>
 
-Iedere softwaretoepassing waarmee {{Dataverwerkingen}} worden uitgevoerd.
+Iedere softwaretoepassing waarmee {{Dataverwerkingen}} kunnen worden uitgevoerd.
 
 <dfn data-lt="Betrokkenen">Betrokkene</dfn>
 
@@ -46,7 +49,7 @@ De {{Betrokkene}} heeft het recht om van de {{Verantwoordelijke}} uitsluitsel te
 
 <dfn data-lt="Logboeken">Logboek</dfn>
 
-Softwaretoepassing waarmee het log van {{Dataverwerkingen}} wordt bijgehouden.
+Softwaretoepassing waarmee het log van {{Dataverwerkingen}} kunnen worden bijgehouden.
 
 <dfn>Logregel</dfn>
 
@@ -54,7 +57,7 @@ Resultaat van een enkele gebeurtenis in de logging.
 
 <dfn data-lt="Registers">Register</dfn>
 
-Register waarin statische data over {{Verwerkingsactiviteiten}} worden geregistreerd en ter beschikking gesteld.
+Register waarin statische data over {{Verwerkingsactiviteiten}} kunnen worden geregistreerd en ter beschikking gesteld.
 
 <dfn data-lt="Traces">Trace</dfn>
 
@@ -76,7 +79,7 @@ Activiteiten die een organisatie onderkent heeft als activiteiten waarbinnen {{D
 
 ## Algemene werking van de standaard
 
-{{Applicaties}} loggen metadata over {{Dataverwerkingen}} in een daarvoor ingerichte softwaretoepassing, het Logboek Dataverwerkingen. Elke Dataverwerking wordt apart gelogd. Dataverwerkingen binnen dezelfde context (bijvoorbeeld een organisatie of een verantwoordelijkheid binnen een organisatie) worden gegroepeerd met behulp van een Trace. Wanneer een Dataverwerking een andere Dataverwerking tot gevolg heeft worden de logregels van beide Dataverwerkingen aan elkaar gelinkt. Statische informatie over Dataverwerkingen kan worden opgezocht in Registers op basis van een verwijzing die in elke logregel wordt opgenomen.
+{{Applicaties}} loggen metadata over {{Dataverwerkingen}} in een daarvoor ingerichte softwaretoepassing, het {{Logboek}}. Elke Dataverwerking wordt apart gelogd. Dataverwerkingen binnen dezelfde context (bijvoorbeeld een organisatie of een verantwoordelijkheid binnen een organisatie) worden gegroepeerd met behulp van een Trace. Wanneer een Dataverwerking een andere Dataverwerking tot gevolg heeft worden de logregels van beide Dataverwerkingen aan elkaar gelinkt. Statische informatie over Dataverwerkingen kan worden opgezocht in Registers op basis van een verwijzing die in elke logregel wordt opgenomen.
 
 ### Extensies
 
@@ -92,7 +95,7 @@ Enkele voorbeelden van extensies (deze zijn nog niet per definitie vastgesteld):
 
 ### Profielen
 
-In een **profiel** worden aanvullende beperkingen en verplichtingen vastgelegd over het gebruik van de standaard. Op deze
+In een profiel worden aanvullende beperkingen en verplichtingen vastgelegd over het gebruik van de standaard. Op deze
 manier kan een groep organisaties interoperabiliteit organiseren. Voorbeelden van aanvullende afspraken in een profiel zijn:
 
 * De combinatie van extensies die gebruikt wordt
@@ -102,4 +105,4 @@ manier kan een groep organisaties interoperabiliteit organiseren. Voorbeelden va
 
 ### Use case
 
-Een typische use case voor het gebruik van de standaard is een samenwerking tussen meerdere organisaties die interoperabiliteit willen bereiken bij het loggen van Dataverwerkingen, om zo op eenduidige manier te kunnen verantwoorden over de dataverwerking.
+Een typische use case voor het gebruik van de standaard is een samenwerking tussen meerdere organisaties die interoperabiliteit willen bereiken bij het loggen van {{Dataverwerkingen}}, om zo op eenduidige manier te kunnen verantwoorden over de dataverwerking.

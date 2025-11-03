@@ -4,8 +4,6 @@ De overheid wil voor burgers en bedrijven zo transparant mogelijk zijn in de omg
 
 Transparantie en verantwoording naar burgers is één van de drijfveren voor ontwikkeling van deze logging standaard maar geen onderdeel van de standaard. De standaard richt zich op vastlegging van de logging en deze eenduidige vastlegging maakt het mogelijk om, indien daar later behoefte aan is, inzage mogelijk te maken.
 
-Het project Logboek Dataverwerkingen maakt deel uit van het [actieplan Data bij de Bron](https://www.digitaleoverheid.nl/data-bij-de-bron/) en onderzoekt met [Digilab](https://digilab.overheid.nl/) of we op basis van de tot nu toe opgedane inzichten een overheidsbrede standaard kunnen vaststellen.
-
 ## Verwijzingen
 
 De Logboek Dataverwerkingen (LDV) standaard bestaat uit de volgende vier documenten:
