@@ -10,7 +10,7 @@ Door Dataverwerkingen te loggen volgens de standaard kunnen organisaties het dat
 
 ## Werkingsgebied van de standaard
 
-<p class="noot">Deze sectie bevat de beoogde beschrijvingen voor opname op de lijst van Aanbevolen standaarden van Forum Standaardisatie
+<p class="note">Deze sectie bevat de beoogde beschrijvingen voor opname op de lijst van Aanbevolen standaarden van Forum Standaardisatie
 
 Functioneel toepassingsgebied: De standaard kan worden toegepast bij het uitvoeren van dataverwerkingen en het aan elkaar relateren van dataverwerkingen van verschillende verwerkingsverantwoordelijken.
 
