@@ -38,21 +38,27 @@ Het Logboek MOET het wegschrijven van elke logregel bevestigen.
 
 De interface MOET de volgende velden implementeren:
 
-| Veld                  | Type           | optioneel | Omschrijving |
-|-----------------------|----------------|---------------|--------------|
-| `trace_id`            | 16 byte        | verplicht     | Unieke identificerende code van {{Trace}} die {{Dataverwerking}} volgt |
-| `span_id`             |  8 byte        | verplicht     | Unieke identificerende code van {{Actie}} binnen de Dataverwerking |
-| `status`              | enum           | verplicht     | Status van de Actie |
-| `name`                | string         | verplicht     | Naam van de specifieke Actie binnen de Dataverwerking |
-| `start_time`          | timestamp (ms) | verplicht     | Tijdstip waarop de Actie gestart is |
-| `end_time`            | timestamp (ms) | verplicht     | Tijdstip waarop de Actie beëindigd is |
-| `parent_span_id`      |  8 byte        | optioneel     | Unieke identificerende code aanroepende Actie *binnen huidige Trace* |
-| `resource`            | object         | optioneel     | Zie toelichting hieronder |
-| `attributes`          | object         | verplicht     | Zie toelichting hieronder |
+| Veld                                | Type    | optioneel |
+|-------------------------------------|---------|-----------|
+| [`trace_id`](#trace_id)             | 16 byte | verplicht |
+| [`span_id`](#span_id)               | 8 byte  | verplicht |
+| [`status`](#status)                 | enum    | verplicht |
+| [`name`](#name)                     | string  | verplicht |
+| [`start_time`](#start_time)         | uint64  | verplicht |
+| [`end_time`](#end_time)             | uint64  | verplicht |
+| [`parent_span_id`](#parent_span_id) | 8 byte  | optioneel |
+| [`resource`](#resource)             | object  | optioneel |
+| [`attributes`](#attributes)         | object  | verplicht |
+
+#### `trace_id`
+
+Unieke identificerende code van {{Trace}} die {{Dataverwerking}} volgt.
+Als er meerdere applicaties dataverwerkingen uitvoeren ten behoeve van 1 originele dataverwerking, dan is de trace code identiek voor al deze dataverwerkingen, zie [gedrag van applicaties](#applicatie-gedrag).
 
 #### `span_id`
 
-Het veld `span_id` is in implementaties voor logging.
+Unieke identificerende code van {{Actie}} binnen de {{Dataverwerking}}.
+Een applicatie kan meerdere `span_id` voor dezelfde `trace_id` hebben.
 
 #### `status`
 
@@ -63,6 +69,24 @@ Het veld `status` is een enumeratie die de volgende waarden kan bevatten:
 * `Error`: De waarde `Error` wordt toegekend bij fouten die zijn ontstaan binnen het systeem dat de dataverwerking uitvoert, zoals interne fouten of mislukte uitvoeringen door technische oorzaken.
 
 De waarden `Unset` en `Ok` worden altijd bepaald op basis van het resultaat van de verwerking. De waarde `Ok` is optioneel en kan gebruikt worden als de organisatie ervoor kiest dataverwerkingen expliciet als succesvol te markeren. `Error` is alleen nodig als er een fout is opgetreden bij het interne proces. Een dataverwerking die niet klopt op basis van de gegeven gebruikersinput, maar die zonder fouten is afgehandeld, hoort dus status `Unset` te krijgen.
+
+#### `name`
+
+Naam van de specifieke {{Actie}} binnen de {{Dataverwerking}}.
+Dit is een tekstuele beschrijving bestemd voor mensen, niet voor machines.
+
+#### `start_time`
+
+Tijdstip waarop de {{Actie}} gestart is in milliseconden sinds Epoch.
+
+#### `end_time`
+
+Tijdstip waarop de {{Actie}} beëindigd is in milliseconden sinds Epoch.
+
+#### `parent_span_id`
+
+Unieke identificerende code aanroepende {{Actie}} *binnen de huidige applicatie*.
+Als er een andere applicatie de aanroep doet, dan wordt dat opgeslagen in (`dpl.core.foreign_operation.span_id`)(#attributes).
 
 #### `resource`
 
@@ -84,10 +108,10 @@ Het veld `attributes` is een object, opgebouwd uit velden in een namespace met p
 
 De volgende velden in de namespace `core` zijn enkel vereist als er een aanroepende Applicatie is, zie de specificatie van het [gedrag van Applicaties](#applicatie-gedrag).
 
-| Veldnaam                             | Type    | Omschrijving |
-|--------------------------------------|---------|--------------|
-| dpl.core.foreign_operation.span_id   |  8 byte | Unieke identificerende code van de *Actie* bij externe partij |
-| dpl.core.foreign_operation.processor | URL     | Link naar website van externe partij |
+| Veldnaam                             | Type   | Omschrijving                                                      |
+|--------------------------------------|--------|-------------------------------------------------------------------|
+| dpl.core.foreign_operation.span_id   | 8 byte | Unieke identificerende code van de *Actie* bij externe applicatie |
+| dpl.core.foreign_operation.processor | URL    | Link naar externe applicatie                                      |
 
 <div class="note">
 
@@ -120,7 +144,9 @@ De Applicatie MOET voor iedere actie (`span_id`) een logregel wegschrijven via d
 
 De Applicatie MOET bijhouden of een actie geslaagd of mislukt is en dit per Dataverwerking als status (`status`) meegeven in de Logregel.
 
-Als de Applicatie een verzoek van een andere Applicatie kan ontvangen, MOET de Applicatie metadata volgens de W3C Trace Context standaard kunnen verwerken en gebruiken in de eigen Trace(s). Metadata verkregen via W3C Trace Context MOET in `attributes` meegenomen worden als velden die beginnen met `dpl.core.foreign_operation`. Zie de [specificatie van het logboek](#logboek-interface) voor de lijst van velden.
+Als de Applicatie een verzoek van een andere Applicatie kan ontvangen, MOET de Applicatie metadata volgens de W3C Trace Context standaard kunnen verwerken en gebruiken in de eigen Trace(s).
+Metadata verkregen via W3C Trace Context MOET in `attributes` meegenomen worden als velden die beginnen met `dpl.core.foreign_operation`.
+Zie de specificatie van [attributes in het logboek](#attributes) voor de lijst van velden.
 
 Als de Applicatie een verzoek aan een andere Applicatie kan versturen, MOET de Applicatie metadata volgens de W3C Trace Context standaard meegeven aan dit verzoek.
 
