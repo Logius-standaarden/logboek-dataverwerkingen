@@ -86,7 +86,7 @@ Tijdstip waarop de {{Actie}} beëindigd is in milliseconden sinds Epoch.
 #### `parent_span_id`
 
 Unieke identificerende code aanroepende {{Actie}} *binnen de huidige applicatie*.
-Als er een andere applicatie de aanroep doet, dan wordt dat opgeslagen in (`dpl.core.foreign_operation.span_id`)(#attributes).
+Als er een andere applicatie de aanroep doet, dan wordt dat opgeslagen in [`dpl.core.foreign_operation.span_id`](#attributes).
 
 #### `resource`
 
