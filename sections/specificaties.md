@@ -38,22 +38,22 @@ Het Logboek MOET het wegschrijven van elke logregel bevestigen.
 
 De interface MOET de volgende velden implementeren:
 
-| Veld                                | Type    | optioneel |
-|-------------------------------------|---------|-----------|
-| [`trace_id`](#trace_id)             | 16 byte | verplicht |
-| [`span_id`](#span_id)               | 8 byte  | verplicht |
-| [`status`](#status)                 | enum    | verplicht |
-| [`name`](#name)                     | string  | verplicht |
-| [`start_time`](#start_time)         | uint64  | verplicht |
-| [`end_time`](#end_time)             | uint64  | verplicht |
-| [`parent_span_id`](#parent_span_id) | 8 byte  | optioneel |
-| [`resource`](#resource)             | object  | optioneel |
-| [`attributes`](#attributes)         | object  | verplicht |
+| Veld                                | Type    | Verplicht? |
+|-------------------------------------|---------|------------|
+| [`trace_id`](#trace_id)             | 16 byte | verplicht  |
+| [`span_id`](#span_id)               | 8 byte  | verplicht  |
+| [`status`](#status)                 | enum    | verplicht  |
+| [`name`](#name)                     | string  | verplicht  |
+| [`start_time`](#start_time)         | uint64  | verplicht  |
+| [`end_time`](#end_time)             | uint64  | verplicht  |
+| [`parent_span_id`](#parent_span_id) | 8 byte  | optioneel  |
+| [`resource`](#resource)             | object  | optioneel  |
+| [`attributes`](#attributes)         | object  | verplicht  |
 
 #### `trace_id`
 
 Unieke identificerende code van {{Trace}} die {{Dataverwerking}} volgt.
-Als er meerdere applicaties dataverwerkingen uitvoeren ten behoeve van 1 originele dataverwerking, dan is de trace code identiek voor al deze dataverwerkingen, zie [gedrag van applicaties](#applicatie-gedrag).
+Als er meerdere applicaties dataverwerkingen uitvoeren ten behoeve van 1 originele dataverwerking, dan is de trace code identiek voor al deze dataverwerkingen, zie [gedrag van applicaties](#gedrag-van-applicatie).
 
 #### `span_id`
 
@@ -92,21 +92,21 @@ Als er een andere applicatie de aanroep doet, dan wordt dat opgeslagen in [`dpl.
 
 Het veld `resource` is een object, opgebouwd uit de volgende velden:
 
-| Veldnaam   | Type | Omschrijving |
-|------------|------|--------------|
-| attributes | Any  | Een object met velden dat gebruikt wordt om een systeem, applicatie of component aan te duiden op een manier die binnen de organisatie gebruikelijk is. Denk hierbij aan velden als naam en versienummer van een applicatie, of een verwijzing naar een record in een [CMDB](https://www.hci-itil.com/ITIL_v3/books/3_service_transition/service_transition_ch4_3.html).|
+| Veldnaam   | Type | Omschrijving                                                                                                                                                                                                                                                                                                                                                             |   |
+|------------|------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
+| attributes | Any  | Een object met velden dat gebruikt wordt om een systeem, applicatie of component aan te duiden op een manier die binnen de organisatie gebruikelijk is. Denk hierbij aan velden als naam en versienummer van een applicatie, of een verwijzing naar een record in een [CMDB](https://www.hci-itil.com/ITIL_v3/books/3_service_transition/service_transition_ch4_3.html). |   |
 
 #### `attributes`
 
 Het veld `attributes` is een object, opgebouwd uit velden in een namespace met prefix `dpl` (data processing log). De volgende velden zijn vereist in de namespace `core`:
 
-| Veldnaam                        | Type   | Omschrijving |
-|---------------------------------|--------|--------------|
-| dpl.core.processing_activity_id | URI    | Verwijzing naar een Register met meer informatie over de Verwerkingsactiviteit. |
-| dpl.core.data_subject_id        | String | Unieke, versleutelde identificerende code van de Betrokkene. |
+| Veldnaam                        | Type   | Omschrijving                                                                                                           |
+|---------------------------------|--------|------------------------------------------------------------------------------------------------------------------------|
+| dpl.core.processing_activity_id | URI    | Verwijzing naar een Register met meer informatie over de Verwerkingsactiviteit.                                        |
+| dpl.core.data_subject_id        | String | Unieke, versleutelde identificerende code van de Betrokkene.                                                           |
 | dpl.core.data_subject_id_type   | String | Type van de identificerende code, zoals BSN, personeelsnummer, of een URI naar een Register dat het type specificeert. |
 
-De volgende velden in de namespace `core` zijn enkel vereist als er een aanroepende Applicatie is, zie de specificatie van het [gedrag van Applicaties](#applicatie-gedrag).
+De volgende velden in de namespace `core` zijn enkel vereist als er een aanroepende Applicatie is, zie de specificatie van het [gedrag van Applicaties](#gedrag-van-applicatie).
 
 | Veldnaam                             | Type   | Omschrijving                                                      |
 |--------------------------------------|--------|-------------------------------------------------------------------|
@@ -126,9 +126,7 @@ Dit om te voorkomen dat niet-gestandaardiseerde namespaces worden gebruikt en er
 
 Voor iedere {{Applicatie}} waarin Dataverwerkingen plaatsvinden gelden de volgende specificaties voor gedrag.
 
-<span name="applicatie-gedrag"></span>
-
-### Gedrag
+### Gedrag van Applicatie
 
 Het gespecificeerde gedrag van Applicaties is erop gericht om de interface van het Logboek te gebruiken. Voor alle metadata geldt dat de specificatie te vinden is in de interface van het Logboek.
 
@@ -270,6 +268,6 @@ Een foutregistratie kan er als volgt uitzien:
 
 Voor ieder {{Register}} met statische data over Dataverwerkingen gelden de volgende specificaties voor het gedrag en de interface.
 
-### Gedrag
+### Gedrag van Register
 
 Het Register MOET iedere relevante wijziging van een Verwerkingsactiviteit opslaan als een nieuwe versie met tijdstip, zodat de `dpl.core.processing_activity_id` naar een eenduidige versie van de verwerkingsactiviteit verwijst in combinatie met het tijdstip.
