@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "title": "Processing Actitivities Register API v0.1"
+    "title": "Processing Activities Register API v0.1"
   },
   "paths": {
     "/processing_activities/{processingActivityId}": {
