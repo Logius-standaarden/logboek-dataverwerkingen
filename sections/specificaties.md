@@ -38,6 +38,18 @@ Het Logboek MOET het wegschrijven van elke logregel bevestigen.
 
 De interface MOET de volgende velden implementeren:
 
+<div class="note">
+
+In SDK's van OpenTelemetry worden soms andere structuren of capitalization gebruikt dan hoe die in deze tabel voorkomen.
+Dit komt doordat programmeertalen verschillende naming conventions gebruiken en de SDK's deze conventions volgen.
+OpenTelemetry enforceert zelf ook geen eenduidige naamgeving.
+
+Voor het wegschrijven van logregels is dit geen probleem, zolang elk veld duidelijk te herleiden is bij het gebruik van de SDK.
+Voor het lezen van logregels (wat in een aparte toekomstige extensie wordt gestandaardiseerd) is dit wel van belang.
+In die extensie zal er wel een specifieke structuur beschreven en hoe daar aan kan worden voldaan.
+
+</div>
+
 | Veld                                | Type    | Verplicht? |
 |-------------------------------------|---------|------------|
 | [`trace_id`](#trace_id)             | 16 byte | verplicht  |
