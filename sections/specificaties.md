@@ -41,7 +41,7 @@ De interface MOET de volgende velden implementeren:
 <div class="note">
 
 In SDK's van OpenTelemetry worden soms andere structuren of capitalization gebruikt dan hoe die in deze tabel voorkomen.
-Dit komt omdat programmeertalen verschillende naming conventions gebruiken en de SDK's deze conventions volgen.
+Dit komt doordat programmeertalen verschillende naming conventions gebruiken en de SDK's deze conventions volgen.
 OpenTelemetry enforceert zelf ook geen eenduidige naamgeving.
 
 Voor het wegschrijven van logregels is dit geen probleem, zolang elk veld duidelijk te herleiden is bij het gebruik van de SDK.
