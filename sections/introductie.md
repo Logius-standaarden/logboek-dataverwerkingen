@@ -59,6 +59,14 @@ Resultaat van een enkele gebeurtenis in de logging.
 <dfn data-lt="Registers">Register</dfn>
 
 Register waarin statische data over {{Verwerkingsactiviteiten}} kunnen worden geregistreerd en ter beschikking gesteld.
+Daarin wordt onder meer het doel van de verwerkingen opgenomen, zoals dit bijvoorbeeld op grond van de AVG voor verwerkingen van persoonsdata al verplicht is.
+Registers in het kader van de standaard beogen een bredere reikwijdte dan persoonsdata.
+
+<aside class="example">
+
+Het Register van Verwerkingsactiviteiten (RvVA in het kader van de AVG) en het [Algoritmeregister](https://algoritmes.overheid.nl/nl) zijn voorbeelden van {{Registers}}.
+
+</aside>
 
 <dfn data-lt="Traces">Trace</dfn>
 
