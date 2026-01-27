@@ -109,15 +109,20 @@ Het veld `resource` is een object, opgebouwd uit de volgende velden:
 | attributes | Any  | Een object met velden dat gebruikt wordt om een systeem, applicatie of component aan te duiden op een manier die binnen de organisatie gebruikelijk is. Denk hierbij aan velden als naam en versienummer van een applicatie, of een verwijzing naar een record in een [CMDB](https://www.hci-itil.com/ITIL_v3/books/3_service_transition/service_transition_ch4_3.html). |   |
 
 <aside class="example">
-<pre><code class="json">"resource": {
+<pre><code class="json">{
   "attributes": {
-    "process.pid": 12345,
-    "process.executable.name": "node",
-    "process.command": "/app.js",
-    "process.command_line": "/bin/node /app.js",
-    "process.runtime.version": "16.17.0",
-    "process.runtime.name": "nodejs",
-    "process.runtime.description": "Node.js'
+    "dpl.core.processing_activity_id": 14
+  },
+  "resource": {
+    "attributes": {
+      "process.pid": 12345,
+      "process.executable.name": "node",
+      "process.command": "/app.js",
+      "process.command_line": "/bin/node /app.js",
+      "process.runtime.version": "16.17.0",
+      "process.runtime.name": "nodejs",
+      "process.runtime.description": "Node.js"
+    }
   }
 }</code></pre>
 </aside>
