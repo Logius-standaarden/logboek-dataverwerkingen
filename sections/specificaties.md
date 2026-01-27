@@ -97,8 +97,9 @@ Tijdstip waarop de {{Actie}} beëindigd is in milliseconden sinds Epoch.
 
 #### `parent_span_id`
 
-Unieke identificerende code aanroepende {{Actie}} *binnen de huidige applicatie*.
-Als er een andere applicatie de aanroep doet, dan wordt dat opgeslagen in [`dpl.core.foreign_operation.span_id`](#attributes).
+Unieke identificerende code aanroepende {{Actie}}.
+Dit geldt voor zowel binnen de huidige applicatie als bij een aanroep van een andere applicatie.
+Als `dpl.core.foreign_operation.processor` aanwezig is (zie [attributes](#attributes)), dan is het een aanroep van een andere applicatie.
 
 #### `resource`
 
@@ -122,7 +123,6 @@ De volgende velden in de namespace `core` zijn enkel vereist als er een aanroepe
 
 | Veldnaam                             | Type   | Omschrijving                                                      |
 |--------------------------------------|--------|-------------------------------------------------------------------|
-| dpl.core.foreign_operation.span_id   | 8 byte | Unieke identificerende code van de *Actie* bij externe applicatie |
 | dpl.core.foreign_operation.processor | URL    | Link naar externe applicatie                                      |
 
 <div class="note">
