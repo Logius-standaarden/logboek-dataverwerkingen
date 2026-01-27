@@ -109,6 +109,34 @@ Het veld `resource` is een object, opgebouwd uit de volgende velden:
 |------------|------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|
 | attributes | Any  | Een object met velden dat gebruikt wordt om een systeem, applicatie of component aan te duiden op een manier die binnen de organisatie gebruikelijk is. Denk hierbij aan velden als naam en versienummer van een applicatie, of een verwijzing naar een record in een [CMDB](https://www.hci-itil.com/ITIL_v3/books/3_service_transition/service_transition_ch4_3.html). |   |
 
+<aside class="example">
+<pre><code class="json">{
+  "attributes": {
+    "dpl.core.processing_activity_id": 14
+  },
+  "resource": {
+    "attributes": {
+      "process.pid": 12345,
+      "process.executable.name": "node",
+      "process.command": "/app.js",
+      "process.command_line": "/bin/node /app.js",
+      "process.runtime.version": "16.17.0",
+      "process.runtime.name": "nodejs",
+      "process.runtime.description": "Node.js"
+    }
+  }
+}</code></pre>
+</aside>
+
+<div class="note">
+
+Dit is een veld wat een object is, met daarin een veld "attributes".
+Deze structuur komt voor uit OpenTelemetry ([Resource definitie](https://opentelemetry.io/docs/specs/otel/resource/sdk/)).
+Ook al is OpenTelemetry niet verplicht te gebruiken, de structuur van "resource" is er wel op gebaseerd.
+Een logregel bevat de hoofdvelden "resource" en "attributes" (volgende sectie) en die dienen verschillende doelen.
+
+</div>
+
 #### `attributes`
 
 Het veld `attributes` is een object, opgebouwd uit velden in een namespace met prefix `dpl` (data processing log). De volgende velden zijn vereist in de namespace `core`:
