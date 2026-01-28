@@ -102,7 +102,7 @@ Enkele voorbeelden van extensies (deze zijn nog niet per definitie vastgesteld):
 * [Concept-extensie zorg](https://logius-standaarden.github.io/logboek-extensie-nen7513/) <br>
   Deze extensie was een proof-of-concept hoe dataverwerkingen die aan de [[?NEN7513]] norm kunnen worden vastgelegd en beheerd in een logboek.
 
-* [Extensie lezen](https://github.com/Logius-standaarden/logboek-extensie-lezen) <br>
+* [Extensie lezen](https://logius-standaarden.github.io/logboek-extensie-lezen/) <br>
   Deze extensie specificeert hoe vanuit een logboek de data gelezen kan worden.
 
 ### Profielen
