@@ -1,7 +1,8 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "title": "Processing Activities Register API v0.1"
+    "title": "Processing Activities Register API v0.1",
+    "version": "0.1.0"
   },
   "paths": {
     "/processing_activities/{processingActivityId}": {
@@ -13,11 +14,17 @@
       "get": {
         "responses": {
           "200": {
+            "description": "List of versions for a processing activity",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ProcessingActivity"
                 }
+              }
+            },
+            "headers": {
+              "API-Version": {
+                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
               }
             }
           }
@@ -36,11 +43,17 @@
       "get": {
         "responses": {
           "200": {
+            "description": "Information about a specific version of a processing activity",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ProcessingActivityVersion"
                 }
+              }
+            },
+            "headers": {
+              "API-Version": {
+                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
               }
             }
           }
@@ -56,11 +69,17 @@
       "get": {
         "responses": {
           "200": {
+            "description": "Description of an entity which can be a recipient of a processing activity",
             "content": {
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/Entity"
                 }
+              }
+            },
+            "headers": {
+              "API-Version": {
+                "$ref": "https://static.developer.overheid.nl/adr/components.yaml#/headers/API-Version"
               }
             }
           }
@@ -88,6 +107,15 @@
         }
       },
       "ProcessingActivityVersion": {
+        "required": [
+          "measures",
+          "name",
+          "version",
+          "processingOptions",
+          "purpose",
+          "recipients",
+          "validFrom"
+        ],
         "properties": {
           "dataSubjects": {
             "type": "array",
