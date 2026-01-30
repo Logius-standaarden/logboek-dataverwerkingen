@@ -2,7 +2,7 @@
 
 Dit document bevat een normatieve standaard voor het verantwoord loggen van dataverwerkingen in de Nederlandse publieke sector. De governance van deze standaard wordt beschreven in het [API-Standaarden beheermodel](https://gitdocumentatie.logius.nl/publicatie/api/beheermodel/), gepubliceerd door Logius.
 
-# Context bij de standaard
+## Context bij de standaard
 
 De overheid wil voor burgers en bedrijven zo transparant mogelijk zijn in de omgang met hun data. Daarom is het bij de informatieverwerking in datasets belangrijk om voor elke mutatie of raadpleging vast te leggen wie deze actie wanneer uitvoert, en waarom. Voor een optimale samenwerking over organisaties en bronnen heen is voor deze logging een algemene standaard nodig.
 
