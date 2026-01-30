@@ -8,8 +8,6 @@ De standaard Logboek Dataverwerkingen beschrijft een manier om technisch interop
 
 Door Dataverwerkingen te loggen volgens de standaard kunnen organisaties het datagebruik verantwoorden.
 
-De governance van deze standaard wordt beschreven in het [API-Standaarden beheermodel](https://gitdocumentatie.logius.nl/publicatie/api/beheermodel/), gepubliceerd door Logius.
-
 ## Werkingsgebied van de standaard
 
 <p class="note">Deze sectie bevat de beoogde beschrijvingen voor opname op de lijst van Aanbevolen standaarden van Forum Standaardisatie
