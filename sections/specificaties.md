@@ -28,9 +28,20 @@ Voor ieder Logboek waarin Dataverwerkingen worden gelogd gelden de volgende spec
 
 ### Gedrag
 
-Het Logboek MOET TLS afdwingen op connecties volgens de binnen de organisatie gangbare standaard.
+Het Logboek MOET TLS kunnen afdwingen.
+
+<p class="note">Hiermee wordt niet bedoeld dat TLS verplicht is.
+Als er software wordt geschreven dat een Logboek component implementeert, dan moet dit TLS kunnen ondersteunen.
+Of TLS connecties daadwerkelijk worden toegepast door organisaties die de software gebruiken, is de keuze van de organisatie zelf.
 
 Het Logboek MOET het wegschrijven van elke logregel bevestigen.
+
+<div class="note">
+
+Het Logboek bevestigt het wegschrijven van elke logregel, maar dat betekent niet dat elke Applicatie hier op moet wachten.
+Hoe om te gaan met deze bevestiging is een implementatiekeuze van de organisatie die verantwoording wil afleggen.
+
+</div>
 
 <span name="logboek-interface"></span>
 
