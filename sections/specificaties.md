@@ -38,9 +38,8 @@ Het Logboek MOET het wegschrijven van elke logregel bevestigen.
 
 <div class="note">
 
-Het Logboek bevestigt het wegschrijven van elke logregel, maar dat betekent niet dat elke Applicatie hier op MOET wachten.
-In het kader van verantwoording is het AANBEVOLEN om een Applicatie te laten wachten op een bevestiging van een Logboek, omdat [Logging als verantwoordingsinstrument](https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/#logging-als-verantwoordingsinstrument) wordt ingezet.
-Als logregels niet correct worden weggeschreven, dan is verantwoording op basis van Logging niet mogelijk.
+Het Logboek bevestigt het wegschrijven van elke logregel, maar dat betekent niet dat elke Applicatie hier op moet wachten.
+Hoe om te gaan met deze bevestiging is een implementatiekeuze van de organisatie die verantwoording wil afleggen.
 
 </div>
 
