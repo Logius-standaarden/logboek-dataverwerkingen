@@ -149,15 +149,33 @@
             "description": "LegalBasis as defined in https://w3c.github.io/dpv/2.1/dpv/modules/legal_basis.html",
             "type": "array",
             "items": {
-              "enum": [
-                "Consent",
-                "Contract",
-                "DataTransferLegalBasis",
-                "LegalObligation",
-                "LegitimateInterest",
-                "OfficialAuthorityOfController",
-                "PublicInterest",
-                "VitalInterest"
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "enum": ["LegalObligation"]
+                    },
+                    "applicable_laws": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "format": "url"
+                      }
+                    }
+                  }
+                },
+                {
+                  "enum": [
+                    "Consent",
+                    "Contract",
+                    "DataTransferLegalBasis",
+                    "LegitimateInterest",
+                    "OfficialAuthorityOfController",
+                    "PublicInterest",
+                    "VitalInterest"
+                  ]
+                }
               ]
             }
           },
