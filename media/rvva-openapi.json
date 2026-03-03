@@ -156,7 +156,7 @@
                     "type": {
                       "enum": ["LegalObligation"]
                     },
-                    "applicable_laws": {
+                    "applicableLaws": {
                       "type": "array",
                       "items": {
                         "type": "string",
@@ -349,3 +349,4 @@
     }
   }
 }
+
