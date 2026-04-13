@@ -2,11 +2,11 @@ import { loadRespecWithConfiguration } from "https://logius-standaarden.github.i
 
 loadRespecWithConfiguration({
   maxTocLevel: 3,
-  specStatus: "VV",
+  specStatus: "DEF",
   specType: "ST",
   pubDomain: "logboek",
   shortName: "dataverwerkingen",
-  publishDate: "2026-02-11",
+  publishDate: "2026-04-09",
   publishVersion: "1.0.0",
   prevVersion: [],
 
