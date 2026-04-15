@@ -28,17 +28,17 @@ loadRespecWithConfiguration({
     {
       name: "Nil Barua",
       company: "Logius",
-      companyURL: "https://logius.nl",
+      companyURL: "https://www.logius.nl",
     },
     {
       name: "Martin van der Plas",
       company: "Logius",
-      companyURL: "https://logius.nl",
+      companyURL: "https://www.logius.nl",
     },
     {
       name: "Tim van der Lippe",
       company: "Logius",
-      companyURL: "https://logius.nl",
+      companyURL: "https://www.logius.nl",
     }
   ],
   authors: [
