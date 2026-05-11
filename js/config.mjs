@@ -65,7 +65,8 @@ loadRespecWithConfiguration({
       title: "Medische informatica - Logging - Vastleggen van acties op persoonlijke gezondheidsinformatie"
     },
   "logboek juridisch beleidskader": {
-      href: "https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/",
+      authors: ["Wouter Diephuis", "Mirian van Ansem"]
+      href: "https://gitdocumentatie.logius.nl/publicatie/logboek/juridisch/1.0.0/",
       publisher: "Logius",
       title: "Logboek Dataverwerkingen - Juridisch beleidskader"
     },
