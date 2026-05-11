@@ -64,5 +64,10 @@ loadRespecWithConfiguration({
       publisher: "NEN",
       title: "Medische informatica - Logging - Vastleggen van acties op persoonlijke gezondheidsinformatie"
     },
+  "logboek juridisch beleidskader": {
+      href: "https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/",
+      publisher: "Logius",
+      title: "Logboek Dataverwerkingen - Juridisch beleidskader"
+    },
   },
 });
