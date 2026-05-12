@@ -64,5 +64,12 @@ loadRespecWithConfiguration({
       publisher: "NEN",
       title: "Medische informatica - Logging - Vastleggen van acties op persoonlijke gezondheidsinformatie"
     },
+  "logboek juridisch beleidskader": {
+      authors: ["Wouter Diephuis", "Mirian van Ansem"],
+      date: "09 april 2026",
+      href: "https://gitdocumentatie.logius.nl/publicatie/logboek/juridisch/1.0.0/",
+      publisher: "Logius",
+      title: "Logboek Dataverwerkingen - Juridisch beleidskader"
+    },
   },
 });
