@@ -78,6 +78,10 @@ Belangrijk uitgangspunt is dat een Verantwoordelijke alleen Logregels bijhoudt v
 
 Een zogenaamde {{Verwerker}} die Dataverwerkingen uitvoert in opdracht van een Verantwoordelijke wordt in deze standaard beschouwd als deel van de Verantwoordelijke. Van welke Logboeken en Registers een Verwerker gebruik maakt is een implementatiekeuze.
 
+<p class="note">
+  Voor de beleidsmatige achtergronden van de aanpak rondom verantwoording over dataverwerkingen (zowel met als zonder persoonsdata), zie het [[?logboek juridisch beleidskader]]</a>.
+</p>
+
 ### Geen inhoudelijke uitwisseling tussen Verantwoordelijken
 
 Er wordt met de standaard geen inhoudelijke informatie over Dataverwerkingen uitgewisseld tussen Verantwoordelijken. Dit is niet nodig, aangezien iedere Verantwoordelijke alleen Logregels over eigen Dataverwerkingen vastlegt. De informatie die wordt uitgewisseld is beperkt tot zogenaamde {{Trace}}-informatie waarmee Logregels van de ene Verantwoordelijke gerelateerd kunnen worden aan Logregels bij de andere Verantwoordelijke.
