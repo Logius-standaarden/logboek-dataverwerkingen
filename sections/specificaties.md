@@ -322,3 +322,42 @@ Voor ieder {{Register}} met statische data over Dataverwerkingen gelden de volge
 ### Gedrag van Register
 
 Het Register MOET iedere relevante wijziging van een Verwerkingsactiviteit opslaan als een nieuwe versie met tijdstip, zodat de `dpl.core.processing_activity_id` naar een eenduidige versie van de verwerkingsactiviteit verwijst in combinatie met het tijdstip.
+
+## Voorbeeld log
+
+Zo kan een volledige log eruit zien conform de standaard Logboek Dataverwerkingen:
+
+<aside class="example">
+Clickhouse traces succesvolle log.
+
+```json
+{
+  "timestamp": "2026-06-29 08:24:41.404881579",
+  "trace_id": "3b7bba9795944b8a55ffc687cbd069a6",
+  "span_id": "1d89e3f1fbcf3a24",
+  "parent_span_id": "7d9a03fb667da3b3",
+  
+  "span_name": "address-get",
+  "service_name": "bag",
+  
+  "duration_ns": 2046652,
+  "status_code": "Ok",                
+  
+  "resource": {
+    "service.name": "bag",
+    "service.version": "1.2.3",
+    "service.instance.id": "bag-prod-01"
+  },
+  
+  "attributes": {
+    "dpl.core.processing_activity_id": "fd49c303-2ab8-4166-9df3-1e56d09baa21",
+    
+    "dpl.core.trace_id": "3b7bba9795944b8a55ffc687cbd069a6",
+    "dpl.core.span_id": "1d89e3f1fbcf3a24",
+    "dpl.core.parent_span_id": "7d9a03fb667da3b3",
+    
+    "action": "address-get",
+    "dataset": "bag-addresses"
+  }
+}
+```
