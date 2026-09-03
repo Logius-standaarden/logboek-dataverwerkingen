@@ -185,7 +185,8 @@ Voor iedere {{Applicatie}} waarin Dataverwerkingen plaatsvinden gelden de volgen
 
 Het gespecificeerde gedrag van Applicaties is erop gericht om de interface van het Logboek te gebruiken. Voor alle metadata geldt dat de specificatie te vinden is in de interface van het Logboek.
 
-De Applicatie MOET een nieuwe Trace  met een uniek `trace_id` bijhouden voor iedere nieuwe Dataverwerking. In een Trace wordt de metadata bijgehouden die nodig is om de interface van een Logboek te gebruiken.
+Als de Applicatie een verzoek van een andere Applicatie ontvangt, MOET de Applicatie de HTTP header `traceparent` volgens de W3C Trace Context standaard kunnen verwerken: de daaruit gehaalde `trace-id` overnemen in `trace_id` en `parent-id` overnemen in `parent_span_id`.
+Is dat niet het geval, dan MOET de applicatie een nieuwe Trace met een uniek `trace_id` genereren.
 
 Een Dataverwerking kan uit meerdere acties bestaan. De applicatie MOET een voor iedere nieuwe actie een unieke `span_id` bijhouden. Iedere Trace heeft tenminste één `span_id`.
 
@@ -197,9 +198,11 @@ De Applicatie MOET voor iedere actie (`span_id`) een logregel wegschrijven via d
 
 De Applicatie MOET bijhouden of een actie geslaagd of mislukt is en dit per Dataverwerking als status (`status`) meegeven in de Logregel.
 
-Als de Applicatie een verzoek van een andere Applicatie kan ontvangen, MOET de Applicatie metadata volgens de W3C Trace Context standaard kunnen verwerken en gebruiken in de eigen Trace(s).
-Metadata verkregen via W3C Trace Context MOET in `attributes` meegenomen worden als velden die beginnen met `dpl.core.foreign_operation`.
-Zie de specificatie van [attributes in het logboek](#attributes) voor de lijst van velden.
+Als de Applicatie een verzoek van een andere Applicatie ontvangt, MOET de Applicatie in `attributes` het veld `dpl.core.foreign_operation.processor` invullen op basis van het verzoek.
+Zie de specificatie van [attributes in het logboek](#attributes) voor meer informatie.
+
+<p class="note">Deze standaard laat vrij hoe te bepalen wat de waarde van de URL is die voor `dpl.core.foreign_operation.processor` ingevuld moet worden.
+Het is bijvoorbeeld mogelijk dat de URL wordt opgehaald uit een [[[?FSC-Core]]] contract.
 
 Als de Applicatie een verzoek aan een andere Applicatie kan versturen, MOET de Applicatie metadata volgens de W3C Trace Context standaard meegeven aan dit verzoek.
 
