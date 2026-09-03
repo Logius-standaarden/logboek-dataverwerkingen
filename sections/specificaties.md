@@ -181,7 +181,7 @@ Voor iedere {{Applicatie}} waarin Dataverwerkingen plaatsvinden gelden de volgen
 
 Het gespecificeerde gedrag van Applicaties is erop gericht om de interface van het Logboek te gebruiken. Voor alle metadata geldt dat de specificatie te vinden is in de interface van het Logboek.
 
-Als de Applicatie een verzoek van een andere Applicatie ontvangt, MOET de Applicatie metadata volgens de W3C Trace Context standaard kunnen verwerken en gebruiken in de eigen Trace(s).
+Als de Applicatie een verzoek van een andere Applicatie ontvangt, MOET de Applicatie de HTTP header `traceparent` volgens de W3C Trace Context standaard kunnen verwerken: de daaruit gehaalde `trace-id` overnemen in `trace_id` en `parent-id` overnemen in `parent_span_id`.
 Is dat niet het geval, dan MOET de applicatie een nieuwe Trace met een uniek `trace_id` genereren.
 
 Een Dataverwerking kan uit meerdere acties bestaan. De applicatie MOET een voor iedere nieuwe actie een unieke `span_id` bijhouden. Iedere Trace heeft tenminste één `span_id`.
