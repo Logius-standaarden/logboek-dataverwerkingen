@@ -73,6 +73,10 @@ In die extensie zal er wel een specifieke structuur beschreven en hoe daar aan k
 | [`resource`](#resource)             | object  | optioneel  |
 | [`attributes`](#attributes)         | object  | verplicht  |
 
+<p class="note">Bytes kunnen als hexadecimaal of binair worden geëncodeerd. 
+Een 16 byte array als hexadecimale string bevat 32 karakters. 
+Zie ook <a href="https://opentelemetry.io/docs/specs/otel/trace/api/#retrieving-the-traceid-and-spanid">OpenTelemetry documentatie</a>.
+
 #### `trace_id`
 
 Unieke identificerende code van {{Trace}} die {{Dataverwerking}} volgt.
