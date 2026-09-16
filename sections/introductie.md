@@ -64,11 +64,9 @@ Het Register van Verwerkingsactiviteiten (RvVA in het kader van de AVG) en het [
 
 Concept waarmee bij elkaar behorende {{Dataverwerkingen}} binnen de grenzen van een systeem worden gegroepeerd.
 
-<dfn data-lt="Verantwoordelijke|Verantwoordelijken|Verwerkingsverantwoordelijken">Verwerkingsverantwoordelijke</dfn>
+<dfn data-lt="Verantwoordelijke|Verantwoordelijken|Verwerkingsverantwoordelijken">Verantwoordelijke</dfn>
 
 Een natuurlijke persoon of rechtspersoon, een overheidsinstantie, een dienst of een ander orgaan die/dat, alleen of samen met anderen, het doel van en de middelen voor de verwerking van data vaststelt. Deze definitie is gebaseerd op ([[AVG]] art. 4, lid 7.), maar laat de verantwoordelijkheid betrekking hebben op de verwerking van álle data, niet alleen persoonsdata.
-
-<p class="note">In de standaard wordt de Verwerkingsverantwoordelijke aangeduid als de Verantwoordelijke voor de leesbaarheid.
 
 <dfn data-lt="Verwerkers">Verwerker</dfn>
 
