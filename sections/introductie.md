@@ -80,7 +80,7 @@ Deze definitie is gebaseerd op ([[AVG]] art. 4, lid 7.), maar laat de verantwoor
 
 <dfn data-lt="Verwerkers">Verwerker</dfn>
 
-Een natuurlijke persoon of rechtspersoon, een overheidsinstantie, een dienst of een ander orgaan die/dat ten behoeve van de {{Verwerkingsverantwoordelijke}} data verwerkt. 
+Een natuurlijke persoon of rechtspersoon, een overheidsinstantie, een dienst of een ander orgaan die/dat ten behoeve van de {{Verantwoordelijke}} data verwerkt. 
 Deze definitie is gebaseerd op ([[AVG]] art. 4, lid 8.), maar laat de verantwoordelijkheid betrekking hebben op de verwerking van álle data, niet alleen persoonsdata.
 
 <dfn data-lt="Verwerkingsactiviteiten">Verwerkingsactiviteit</dfn>
