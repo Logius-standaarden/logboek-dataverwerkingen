@@ -22,7 +22,7 @@ Deze sectie geeft een vernauwende definitie van deze termen om extra eisen te st
 
 <dfn data-lt="Acties">Actie</dfn>
 
-Een Actie is één discrete stap binnen een {{Dataverwerking}}. 
+Eén discrete stap binnen een {{Dataverwerking}}. 
 Een Dataverwerking bestaat uit één of meerdere Acties.
 
 <dfn data-lt="Applicaties">Applicatie</dfn>
@@ -38,9 +38,9 @@ Dit kan aan de hand van kenmerken zoals een (bedrijfs)naam, identificatienummer 
 
 <dfn data-lt="Dataverwerkingen">Dataverwerking</dfn>
 
-Iedere bewerking die uitgevoerd wordt met gegevens, al dan niet uitgevoerd via geautomatiseerde procedures. 
-Een Dataverwerking bestaat uit één of meerdere {{Acties}}. 
-Dataverwerkingen omvatten bijvoorbeeld het verzamelen en vastleggen, het aanpassen en combineren, het inzien en gebruiken, het delen en verspreiden, en het beperken en verwijderen van gegevens. 
+De uitvoering van een handeling of proces met data, gebaseerd op een vooraf gedefinieerde {{Verwerkingsactiviteit}}.
+Dataverwerkingen worden (al dan niet geautomatiseerd) uitgevoerd door {{Applicaties}}.
+Een Dataverwerking bestaat uit één of meerdere {{Acties}}.
 
 <dfn>Inzage</dfn>
 
@@ -85,7 +85,9 @@ Deze definitie is gebaseerd op ([[AVG]] art. 4, lid 8.), maar laat de verantwoor
 
 <dfn data-lt="Verwerkingsactiviteiten">Verwerkingsactiviteit</dfn>
 
-Activiteiten die een {{Verantwoordelijke}} onderkent heeft als activiteiten waarbinnen {{Dataverwerkingen}} plaatsvinden.
+Gedefinieerde handeling of proces waarbij data wordt gebruikt om een specifiek doel te behalen.
+De {{Verantwoordelijke}} bepaald welke {{Verwerkingsactiviteiten}} binnen haar {{Applicatie}} zijn toegestaan.
+Een Verwerkingsactiviteit wordt in de praktijk gebracht door middel van één of meerdere {{Dataverwerkingen}}.
 
 ## Algemene werking van de standaard
 
