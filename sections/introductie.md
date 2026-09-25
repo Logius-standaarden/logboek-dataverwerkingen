@@ -2,9 +2,9 @@
 
 De standaard Logboek Dataverwerkingen beschrijft een manier om technisch interoperabele functionaliteit voor het loggen van {{Dataverwerkingen}} te implementeren, door voor de volgende functionaliteit de interface en het gedrag voor te schrijven:
 
-* het vastleggen van logs van dataverwerkingen
-* het aan elkaar relateren van logs van dataverwerkingen
-* het aan elkaar relateren van dataverwerkingen over de grenzen van systemen
+* het vastleggen van logs van Dataverwerkingen
+* het aan elkaar relateren van logs van Dataverwerkingen
+* het aan elkaar relateren van Dataverwerkingen over de grenzen van systemen
 
 Door Dataverwerkingen te loggen volgens de standaard kunnen organisaties het datagebruik verantwoorden.
 
@@ -22,7 +22,7 @@ Deze sectie geeft een vernauwende definitie van deze termen om extra eisen te st
 
 <dfn data-lt="Acties">Actie</dfn>
 
-Eén discrete stap binnen een {{Dataverwerking}}. 
+Eén discrete stap binnen een {{Dataverwerking}}.
 Een Dataverwerking bestaat uit één of meerdere Acties.
 
 <dfn data-lt="Applicaties">Applicatie</dfn>
@@ -32,8 +32,8 @@ Iedere softwaretoepassing waarmee {{Dataverwerkingen}} kunnen worden uitgevoerd.
 <dfn data-lt="Betrokkenen">Betrokkene</dfn>
 
 Als data van rechtssubjecten door een {{Verantwoordelijke}} worden verwerkt, wordt het subject de 'Betrokkene' genoemd.
-Betrokkenen kunnen zowel natuurlijke personen als rechtspersonen (bedrijven) zijn die met de verwerkte data geïdentificeerd kunnen worden. 
-Een (rechts)persoon is identificeerbaar als deze direct of indirect kan worden herkend. 
+Betrokkenen kunnen zowel natuurlijke personen als rechtspersonen (bedrijven) zijn die met de verwerkte data geïdentificeerd kunnen worden.
+Een (rechts)persoon is identificeerbaar als deze direct of indirect kan worden herkend.
 Dit kan aan de hand van kenmerken zoals een (bedrijfs)naam, identificatienummer of locatiedata, of door specifieke fysieke, economische of sociale eigenschappen.
 
 <dfn data-lt="Dataverwerkingen">Dataverwerking</dfn>
@@ -44,10 +44,10 @@ Een Dataverwerking bestaat uit één of meerdere {{Acties}}.
 
 <dfn>Inzage</dfn>
 
-De {{Betrokkene}} heeft het recht om van de {{Verantwoordelijke}} uitsluitsel te verkrijgen over het al dan niet verwerken van hem betreffende data en, wanneer dat het geval is, om inzage te verkrijgen van die data. 
-{{Inzage}} is gedefinieerd als de handeling waarmee  dat recht wordt uitgevoerd. 
-Voor natuurlijke personen sluit dit aan bij hun recht op inzage zoals bedoeld in de AVG, voor rechtspersonen([[AVG]], art. 15, lid 1). 
-Voor rechtspersonen sluit dit aan bij het recht op transparantie over besluitvorming waar zij bij betrokken zijn. 
+De {{Betrokkene}} heeft het recht om van de {{Verantwoordelijke}} uitsluitsel te verkrijgen over het al dan niet verwerken van hem betreffende data en, wanneer dat het geval is, om inzage te verkrijgen van die data.
+Inzage is gedefinieerd als de handeling waarmee  dat recht wordt uitgevoerd.
+Voor natuurlijke personen sluit dit aan bij hun recht op inzage zoals bedoeld in de AVG, voor rechtspersonen([[AVG]], art. 15, lid 1).
+Voor rechtspersonen sluit dit aan bij het recht op transparantie over besluitvorming waar zij bij betrokken zijn.
 
 <dfn data-lt="Logboeken">Logboek</dfn>
 
@@ -55,13 +55,13 @@ Softwaretoepassing waarmee het log van {{Dataverwerkingen}} worden bijgehouden.
 
 <dfn>Logregel</dfn>
 
-Resultaat van een enkele {{Actie}} in de logging.
+Resultaat van een enkele {{Actie}} in een {{Logboek}}.
 
 <dfn data-lt="Registers">Register</dfn>
 
 Register waarin statische data over {{Verwerkingsactiviteiten}} worden vastgelegd en ter beschikking gesteld door de {{Verantwoordelijke}}.
-Een Register bevat onder meer het doel van de verwerkingen opgenomen, zoals dit bijvoorbeeld op grond van de AVG voor verwerkingen van persoonsdata al verplicht is.
-Registers in het kader van de standaard hebben een bredere reikwijdte dan persoonsdata.
+Een Register bevat onder meer het doel van de Verwerkingsactiviteiten opgenomen, zoals dit bijvoorbeeld op grond van de AVG voor verwerkingen van persoonsdata al verplicht is.
+Registers in het kader van deze standaard hebben een bredere reikwijdte dan persoonsdata.
 
 <aside class="example">
 
@@ -75,12 +75,12 @@ Concept waarmee bij elkaar behorende {{Acties}} en {{Dataverwerkingen}} van éé
 
 <dfn data-lt="Verantwoordelijke|Verantwoordelijken|Verwerkingsverantwoordelijken">Verantwoordelijke</dfn>
 
-Een natuurlijke persoon of rechtspersoon, een overheidsinstantie, een dienst of een ander orgaan die/dat, alleen of samen met anderen, het doel van en de middelen voor de verwerking van data vaststelt. 
+Een natuurlijke persoon of rechtspersoon, een overheidsinstantie, een dienst of een ander orgaan die/dat, alleen of samen met anderen, het doel van en de middelen voor de verwerking van data vaststelt.
 Deze definitie is gebaseerd op ([[AVG]] art. 4, lid 7.), maar laat de verantwoordelijkheid betrekking hebben op de verwerking van álle data, niet alleen persoonsdata.
 
 <dfn data-lt="Verwerkers">Verwerker</dfn>
 
-Een natuurlijke persoon of rechtspersoon, een overheidsinstantie, een dienst of een ander orgaan die/dat ten behoeve van de {{Verantwoordelijke}} data verwerkt. 
+Een natuurlijke persoon of rechtspersoon, een overheidsinstantie, een dienst of een ander orgaan die/dat ten behoeve van de {{Verantwoordelijke}} data verwerkt.
 Deze definitie is gebaseerd op ([[AVG]] art. 4, lid 8.), maar laat de verantwoordelijkheid betrekking hebben op de verwerking van álle data, niet alleen persoonsdata.
 
 <dfn data-lt="Verwerkingsactiviteiten">Verwerkingsactiviteit</dfn>
@@ -88,13 +88,14 @@ Deze definitie is gebaseerd op ([[AVG]] art. 4, lid 8.), maar laat de verantwoor
 Gedefinieerde handeling of proces waarbij data wordt gebruikt om een specifiek doel te behalen.
 De {{Verantwoordelijke}} bepaald welke {{Verwerkingsactiviteiten}} binnen haar {{Applicatie}} zijn toegestaan.
 Een Verwerkingsactiviteit wordt in de praktijk gebracht door middel van één of meerdere {{Dataverwerkingen}}.
+Verwerkingsactiviteiten worden in een {{Register}} vastgelegd.
 
 ## Algemene werking van de standaard
 
-{{Applicaties}} loggen metadata over {{Dataverwerkingen}} in een daarvoor ingerichte softwaretoepassing, het {{Logboek}}. Elke Dataverwerking wordt apart gelogd. 
-Dataverwerkingen binnen dezelfde context (bijvoorbeeld een organisatie of een verantwoordelijkheid binnen een organisatie) worden gegroepeerd met behulp van een Trace. 
-Wanneer een Dataverwerking een andere Dataverwerking tot gevolg heeft worden de logregels van beide Dataverwerkingen aan elkaar gelinkt. 
-Statische informatie over Dataverwerkingen kan worden opgezocht in Registers op basis van een verwijzing die in elke logregel wordt opgenomen.
+{{Applicaties}} loggen metadata over {{Dataverwerkingen}} in een daarvoor ingerichte softwaretoepassing, het {{Logboek}}. Elke Dataverwerking wordt apart gelogd.
+Dataverwerkingen binnen dezelfde context (bijvoorbeeld een organisatie of een verantwoordelijkheid binnen een organisatie) worden gegroepeerd met behulp van een {{Trace}}.
+Wanneer een Dataverwerking een andere Dataverwerking tot gevolg heeft worden de {{Logregels}} van beide Dataverwerkingen aan elkaar gelinkt.
+Statische informatie over Dataverwerkingen kan worden opgezocht in {{Registers}} op basis van een verwijzing die in elke Logregel wordt opgenomen.
 
 ### Extensies
 
