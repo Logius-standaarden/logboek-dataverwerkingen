@@ -53,7 +53,7 @@ Voor rechtspersonen sluit dit aan bij het recht op transparantie over besluitvor
 
 Softwaretoepassing waarmee het log van {{Dataverwerkingen}} worden bijgehouden.
 
-<dfn>Logregel</dfn>
+<dfn data-lt="Logregels">Logregel</dfn>
 
 Resultaat van een enkele {{Actie}} in een {{Logboek}}.
 
