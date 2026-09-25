@@ -1,12 +1,12 @@
 # Introductie
 
-De standaard Logboek Dataverwerkingen beschrijft een manier om technisch interoperabele functionaliteit voor het loggen van {{Dataverwerkingen}} te implementeren, door voor de volgende functionaliteit de interface en het gedrag voor te schrijven:
+Het Logboek Dataverwerkingen standaardiseert een set van semantische attributen voor het doelmatig (dat wat nodig is, en niet meer) loggen van {{Dataverwerkingen}}. Ook wordt de benodigde metadata gestandaardiseerd welke uitgewisseld moet worden wanneer Dataverwerkingen over de grens van systemen plaatsvinden. Met deze standaard worden de volgende situaties ondersteund:
 
-* het vastleggen van logs van Dataverwerkingen
-* het aan elkaar relateren van logs van Dataverwerkingen
+* het vastleggen van {{Logregels}} van Dataverwerkingen
+* het aan elkaar relateren van Logregels van Dataverwerkingen
 * het aan elkaar relateren van Dataverwerkingen over de grenzen van systemen
 
-Door Dataverwerkingen te loggen volgens de standaard kunnen organisaties het datagebruik verantwoorden.
+Door Dataverwerkingen te loggen volgens deze standaard kunnen organisaties het datagebruik verantwoorden.
 
 ## Doelgroep
 
