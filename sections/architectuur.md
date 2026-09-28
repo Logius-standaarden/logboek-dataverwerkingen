@@ -1,33 +1,52 @@
 # Architectuur
 
-Deze sectie beschrijft de algemene architectuur voor het loggen van dataverwerkingen bij toepassing van deze standaard.
+Deze sectie beschrijft de architectuur voor het loggen van {{Dataverwerkingen}} bij toepassing van deze standaard.
 
 ## Context
 
-Op hoog abstractieniveau zijn voor het begrijpen van deze standaard de volgende componenten te onderscheiden:
+Deze standaard definieert de volgende componenten:
 
 * {{Applicatie}}
 * {{Logboek}}
 * {{Register}}
 
-Applicaties schrijven logs over Dataverwerkingen weg in een Logboek.
-Logregels in het Logboek verwijzen naar nadere informatie in een Register.
+Applicaties voeren Dataverwerkingen uit en leggen logs hierover vast in een Logboek van de {{Verantwoordelijke}}.
+Een Dataverwerking bestaat uit één of meerdere {{Acties}}.
+Acties worden als {{Logregels}} in een Logboek vastgelegd.
 
-Een Dataverwerking kan plaatsvinden over de grenzen van een verantwoordelijkheid. In dat geval roept een Applicatie van Verantwoordelijke A de Applicatie van Verantwoordelijke B aan. Denk bijvoorbeeld aan het bevragen of muteren van data via een Application Programming Interface (API).
+In deze standaard wordt een set van semantische attributen gestandaardiseerd voor het loggen van Dataverwerkingen als Logregels.
+De interface tussen Applicatie en Logboek zijn niet in scope van deze standaard.
 
-Een Verantwoordelijke is bijvoorbeeld een organisatie, maar kan ook bestaan uit meerdere organisaties die allemaal onder dezelfde Verantwoordelijke werk uitvoeren. Denk daarbij aan Verwerkers in het kader van de AVG.
+// TODO: Architectuur plaat
 
+Logregels verwijzen naar informatie in een {{Register}}.
+Registers bevatten statische informatie met extra informatie over de {{Verwerkingsactiviteit}} waaronder de Dataverwerking is uitgevoerd.
+Een Register hoeft niet digitaal te bestaan, wel moet een relatie gelegd kunnen worden vanuit Logregels naar aanvullende data in Registers.
+
+###
+
+Een Verantwoordelijke is bijvoorbeeld een organisatie, maar kan bestaan uit meerdere organisaties die onder dezelfde Verantwoordelijke werk uitvoeren. 
+Denk daarbij aan Verwerkers in het kader van de AVG.
 Iedere Verantwoordelijke kan een veelheid aan Applicaties, Logboeken en Registers gebruiken.
 Iedere Verantwoordelijke houdt alleen Logregels bij over eigen Dataverwerkingen.
-Op basis van metadata die tussen Applicaties wordt uitgewisseld is het mogelijk om bij elkaar behorende Logregels in meerdere Logboeken aan elkaar te relateren.
 
-Registers bevatten statische informatie waar vanuit Logregels naar verwezen kan worden voor extra informatie over een Dataverwerking.
+
+
+
+
+
+Een Dataverwerking kan plaatsvinden over de grenzen van een Verantwoordelijke. 
+In dat geval initieert een Applicatie van een Verantwoordelijke een Dataverwerking een Applicatie van een andere Verantwoordelijke aan. 
+Denk bijvoorbeeld aan het bevragen of muteren van data via een Application Programming Interface (API).
+Op basis van metadata (de {{Trace}}) die tussen Applicaties wordt uitgewisseld is het mogelijk om bij elkaar behorende Logregels in verschillende Logboeken aan elkaar te relateren.
+
+
 
 ![architecture](media/architecture-context.svg "Componenten in context")
 
 De standaard beschrijft de interfaces (in het diagram aangeduid met groene lijnen), en het gedrag van de componenten voor zover relevant om technisch interoperabel te worden.
 
-De relatie tussen Logboek en Registers is los. Een Register hoeft niet digitaal te bestaan, wel moet een relatie gelegd kunnen worden vanuit de logregels in het Logboek naar aanvullende data in Registers die de Logregels van nedere context voorzien.
+
 
 ## Componenten
 
