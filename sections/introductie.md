@@ -1,17 +1,19 @@
 # Introductie
 
-Het Logboek Dataverwerkingen standaardiseert een set van semantische attributen voor het doelmatig (dat wat nodig is, en niet meer) loggen van {{Dataverwerkingen}}. Ook wordt de benodigde metadata gestandaardiseerd welke uitgewisseld moet worden wanneer Dataverwerkingen over de grens van systemen plaatsvinden. Met deze standaard worden de volgende situaties ondersteund:
+Het Logboek Dataverwerkingen standaardiseert een set van semantische attributen voor het doelmatig (dat wat nodig is, en niet meer) loggen van {{Dataverwerkingen}}. 
+Ook wordt de benodigde metadata gestandaardiseerd welke uitgewisseld moet worden wanneer Dataverwerkingen over de grens van systemen plaatsvinden ten behoeve van Logging.
+Met deze standaard worden de volgende situaties ondersteund:
 
 * het vastleggen van {{Logregels}} van Dataverwerkingen
 * het aan elkaar relateren van Logregels van Dataverwerkingen
 * het aan elkaar relateren van Dataverwerkingen over de grenzen van systemen
 
-Door Dataverwerkingen te loggen volgens deze standaard kunnen organisaties het datagebruik verantwoorden.
+Door Dataverwerkingen te loggen volgens deze standaard kunnen organisaties het datagebruik eenduidig verantwoorden.
 
 ## Doelgroep
 
 De standaard heeft als doelgroep iedereen die zich bezighoudt met het implementeren van logging rond dataverwerkingen en beschrijft alleen wat relevant is voor de implementatie.
-Alle achterliggende overwegingen zijn te vinden in de [Algemene inleiding](https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/) en het [Juridisch Beleidskader](https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/).
+Alle achterliggende overwegingen zijn te vinden in de [Algemene inleiding](https://logius-standaarden.github.io/logboek-dataverwerkingen-inleiding/) en het [Juridisch beleidskader](https://logius-standaarden.github.io/logboek-dataverwerkingen-juridisch-beleidskader/).
 
 ## Terminologie
 
@@ -71,7 +73,8 @@ Het Register van Verwerkingsactiviteiten (RvVA in het kader van de AVG) en het [
 
 <dfn data-lt="Traces">Trace</dfn>
 
-Concept waarmee bij elkaar behorende {{Acties}} en {{Dataverwerkingen}} van één of meerdere {{Applicaties}} worden gegroepeerd.
+Concept waarmee bij elkaar behorende {{Acties}} van één of meerdere {{Applicaties}} worden gegroepeerd.
+De {{Verantwoordelijke}} bepaald de Trace die bij een Actie hoort.
 
 <dfn data-lt="Verantwoordelijke|Verantwoordelijken|Verwerkingsverantwoordelijken">Verantwoordelijke</dfn>
 
@@ -92,10 +95,11 @@ Verwerkingsactiviteiten worden in een {{Register}} vastgelegd.
 
 ## Algemene werking van de standaard
 
-{{Applicaties}} loggen metadata over {{Dataverwerkingen}} in een daarvoor ingerichte softwaretoepassing, het {{Logboek}}. Elke Dataverwerking wordt apart gelogd.
-Dataverwerkingen binnen dezelfde context (bijvoorbeeld een organisatie of een verantwoordelijkheid binnen een organisatie) worden gegroepeerd met behulp van een {{Trace}}.
-Wanneer een Dataverwerking een andere Dataverwerking tot gevolg heeft worden de {{Logregels}} van beide Dataverwerkingen aan elkaar gelinkt.
-Statische informatie over Dataverwerkingen kan worden opgezocht in {{Registers}} op basis van een verwijzing die in elke Logregel wordt opgenomen.
+{{Applicaties}} loggen metadata over {{Dataverwerkingen}} in een {{Logboek}}, een daarvoor ingerichte softwaretoepassing.
+Elk stap van een Dataverwerking ({{Actie}}) wordt apart gelogd door de {{Verantwoordelijke}} als {{Logregels}}.
+Alle Dataverwerkingen die plaatsvinden binnen dezelfde context (bijvoorbeeld als onderdeel van een dienst) worden gegroepeerd met behulp van een {{Trace}}.
+Wanneer een Dataverwerking een andere Dataverwerking tot gevolg heeft worden de Logregels van beide Dataverwerkingen aan elkaar gelinkt.
+Statische informatie over Dataverwerkingen kan worden opgezocht in {{Registers}} op basis van een in de Logregel opgenomen verwijzing.
 
 ### Extensies
 
