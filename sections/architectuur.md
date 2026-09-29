@@ -11,7 +11,7 @@ Acties worden als {{Logregels}} in een Logboek vastgelegd.
 ![Architectuur context welke de hierboven beschreven relatie tussen Applicaties en een Logboek beschrijft](media/260929-Architecture-context.png "Architectuur context")
 
 Een Verantwoordelijke is bijvoorbeeld een organisatie, maar kan bestaan uit meerdere organisaties die onder dezelfde Verantwoordelijke werk uitvoeren.
-Denk daarbij aan Verwerkers in het kader van de AVG.
+Denk daarbij aan {{Verwerkers}} in het kader van de AVG.
 Iedere Verantwoordelijke kan een veelheid aan Applicaties, Logboeken en Registers gebruiken.
 Iedere Verantwoordelijke houdt alleen Logregels bij over eigen Dataverwerkingen.
 
@@ -43,26 +43,26 @@ Tevens is er een canoniek datamodel ([SVG](./media/datamodel/canoniek.svg), [XLS
 
 ### Applicatie
 
-Een {{Applicatie}} is een softwarecomponent of groep van softwarecomponenten waarmee een Dataverwerking wordt uitgevoerd. 
-Een Applicatie kan in allerlei vormen voorkomen. 
+Een {{Applicatie}} is een softwarecomponent of groep van softwarecomponenten waarmee een Dataverwerking wordt uitgevoerd.
+Een Applicatie kan in allerlei vormen voorkomen.
 Voor de architectuur is niet relevant welke vorm de Applicatie heeft, het is slechts relevant dat dit de component is waar een Dataverwerking wordt uitgevoerd.
 
-In een Applicatie is de context van de {{Dataverwerking}} bekend, zoals welke {{Verwerkingsactiviteit}} wordt uitgevoerd met de Dataverwerking. 
+In een Applicatie is de context van de {{Dataverwerking}} bekend, zoals welke {{Verwerkingsactiviteit}} wordt uitgevoerd met de Dataverwerking.
 Het is dan ook de Applicatie die het loggen van de Dataverwerking initiëert.
 
 ### Logboek
 
-Een {{Logboek}} is een softwarecomponent met een specifieke rol in de context van deze standaard. 
-In het Logboek worden Dataverwerkingen gelogd.
+Een {{Logboek}} is een softwarecomponent met een specifieke rol in de context van deze standaard.
+In het Logboek worden Dataverwerkingen gelogd door een Applicatie.
 
 Dataverwerkingen in het Logboek zelf worden *niet* gelogd in een Logboek Dataverwerkingen, dit zou een oneindige recursiviteit veroorzaken.
 
 ### Register
 
-Een {{Register}} bevat statische informatie over Dataverwerkingen. Elk record in een Register heeft een unieke identificerend kenmerk waarmee de {{Verwerkingsactiviteit}} kan worden aangeduid. 
+Een {{Register}} bevat statische informatie over Dataverwerkingen. Elk record in een Register heeft een unieke identificerend kenmerk waarmee de {{Verwerkingsactiviteit}} kan worden aangeduid.
 Dit identificerend kenmerk wordt gebruikt om in een {{Logregel}} te verwijzen naar aanvullende informatie in een Register.
 
-Het Register kan een softwarecomponent zijn, in dat geval is het een component met een specifieke rol in de context van deze standaard. 
+Het Register kan een softwarecomponent zijn, in dat geval is het een component met een specifieke rol in de context van deze standaard.
 Eventueel kan het ook een Register in de vorm van een document zijn.
 
 Dataverwerkingen in het Register worden gelogd in een Logboek.
@@ -70,13 +70,13 @@ Dataverwerkingen in het Register worden gelogd in een Logboek.
 Voor alle Dataverwerkingen waarbij persoonsdata worden verwerkt is wettelijk geregeld dat de Verwerkingsactiviteiten moeten worden beschreven in het zogenaamde Register van Verwerkingsactiviteiten (AVG art. 30).
 Dit Register wordt verondersteld aanwezig te zijn in iedere organisatie die de standaard Logboek Dataverwerkingen toepast.
 
-Verwerkingsactiviteiten waarin geen persoonsdata worden verwerkt staan niet verplicht in het Register van Verwerkingsactiviteiten. 
+Verwerkingsactiviteiten waarin geen persoonsdata worden verwerkt staan niet verplicht in het Register van Verwerkingsactiviteiten.
 De standaard laat ruimte om dit op te lossen naar eigen voorkeur:
 
 * In het bestaande Register ook Verwerkingsactiviteiten opnemen zonder persoonsdata, al is dit niet wettelijk verplicht
 * Zelf een ander Register opzetten met gelijke interface maar specifiek voor Verwerkingsactiviteiten zonder persoonsdata
 
-Het is daarnaast ook mogelijk om Registers te gebruiken met heel andere statische informatie die meer context geeft over een Logregel, bijv. informatie over de gebruikte beslisregels of van toepassing zijnde normen. 
+Het is daarnaast ook mogelijk om Registers te gebruiken met heel andere statische informatie die meer context geeft over een Logregel, bijv. informatie over de gebruikte beslisregels of van toepassing zijnde normen.
 Dit wordt niet verder uitgewerkt.
 
 <p class="note">Op dit moment is er geen specificatie voor het ontsluiten van een {{Register}} met een API.
@@ -100,7 +100,9 @@ Een zogenaamde {{Verwerker}} die Dataverwerkingen uitvoert in opdracht van een V
 
 ### Geen inhoudelijke uitwisseling tussen Verantwoordelijken
 
-Er wordt met de standaard geen inhoudelijke informatie over Dataverwerkingen uitgewisseld tussen Verantwoordelijken. Dit is niet nodig, aangezien iedere Verantwoordelijke alleen Logregels over eigen Dataverwerkingen vastlegt. De informatie die wordt uitgewisseld is beperkt tot zogenaamde {{Trace}}-informatie waarmee Logregels van de ene Verantwoordelijke gerelateerd kunnen worden aan Logregels bij de andere Verantwoordelijke.
+Er wordt met de standaard geen inhoudelijke informatie over Dataverwerkingen uitgewisseld tussen Verantwoordelijken.
+Dit is niet nodig, aangezien iedere Verantwoordelijke alleen Logregels over eigen Dataverwerkingen vastlegt.
+De informatie die wordt uitgewisseld is beperkt tot {{Trace}}-informatie waarmee Logregels van de ene Verantwoordelijke gerelateerd kunnen worden aan Logregels bij de andere Verantwoordelijke.
 
 ![architecture](media/architecture-grenzen.svg "Context Dataverwerking meegeven over Grenzen")
 
