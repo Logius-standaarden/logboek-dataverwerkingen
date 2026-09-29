@@ -15,7 +15,7 @@ Denk daarbij aan {{Verwerkers}} in het kader van de AVG.
 Iedere Verantwoordelijke kan een veelheid aan Applicaties, Logboeken en Registers gebruiken.
 Iedere Verantwoordelijke houdt alleen Logregels bij over eigen Dataverwerkingen.
 
-In deze standaard wordt een set van semantische attributen gedefinieerd voor het loggen van Dataverwerkingen als Logregels.
+In deze standaard wordt een semantisch model gedefinieerd voor het loggen van Dataverwerkingen als Logregels.
 De interface tussen een Applicatie en een Logboek, en hoe Logregels tot stand komen zijn niet in scope van deze standaard.
 
 Logregels verwijzen naar informatie in een {{Register}}.
