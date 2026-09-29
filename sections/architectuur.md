@@ -4,40 +4,29 @@ Deze sectie beschrijft de architectuur voor het loggen van {{Dataverwerkingen}} 
 
 ## Context
 
-Deze standaard definieert de volgende componenten:
-
-* {{Applicatie}}
-* {{Logboek}}
-* {{Register}}
-
-Applicaties voeren Dataverwerkingen uit en leggen logs hierover vast in een Logboek van de {{Verantwoordelijke}}.
+{{Applicaties}} voeren {{Dataverwerkingen}} uit en leggen logs hierover vast in een {{Logboek}} van de {{Verantwoordelijke}}.
 Een Dataverwerking bestaat uit één of meerdere {{Acties}}.
 Acties worden als {{Logregels}} in een Logboek vastgelegd.
 
-In deze standaard wordt een set van semantische attributen gestandaardiseerd voor het loggen van Dataverwerkingen als Logregels.
-De interface tussen Applicatie en Logboek zijn niet in scope van deze standaard.
+![architecture](media/architecture-context.svg "Componenten in context")
 
-// TODO: Architectuur plaat
+Een Verantwoordelijke is bijvoorbeeld een organisatie, maar kan bestaan uit meerdere organisaties die onder dezelfde Verantwoordelijke werk uitvoeren.
+Denk daarbij aan Verwerkers in het kader van de AVG.
+Iedere Verantwoordelijke kan een veelheid aan Applicaties, Logboeken en Registers gebruiken.
+Iedere Verantwoordelijke houdt alleen Logregels bij over eigen Dataverwerkingen.
+
+In deze standaard wordt een set van semantische attributen gedefinieerd voor het loggen van Dataverwerkingen als Logregels.
+De interface tussen een Applicatie en een Logboek, en hoe Logregels tot stand komen zijn niet in scope van deze standaard.
 
 Logregels verwijzen naar informatie in een {{Register}}.
 Registers bevatten statische informatie met extra informatie over de {{Verwerkingsactiviteit}} waaronder de Dataverwerking is uitgevoerd.
 Een Register hoeft niet digitaal te bestaan, wel moet een relatie gelegd kunnen worden vanuit Logregels naar aanvullende data in Registers.
 
-###
+### Logging bij dataverwerkingen over grenzen
 
-Een Verantwoordelijke is bijvoorbeeld een organisatie, maar kan bestaan uit meerdere organisaties die onder dezelfde Verantwoordelijke werk uitvoeren. 
-Denk daarbij aan Verwerkers in het kader van de AVG.
-Iedere Verantwoordelijke kan een veelheid aan Applicaties, Logboeken en Registers gebruiken.
-Iedere Verantwoordelijke houdt alleen Logregels bij over eigen Dataverwerkingen.
-
-
-
-
-
-
-Een Dataverwerking kan plaatsvinden over de grenzen van een Verantwoordelijke. 
-In dat geval initieert een Applicatie van een Verantwoordelijke een Dataverwerking een Applicatie van een andere Verantwoordelijke aan. 
-Denk bijvoorbeeld aan het bevragen of muteren van data via een Application Programming Interface (API).
+Een Dataverwerking kan plaatsvinden over de grenzen van een Verantwoordelijke.
+Bijvoorbeeld het bevragen of muteren van data bij een andere organisatie via een Application Programming Interface (API).
+In dat geval initieert een Applicatie van een Verantwoordelijke een Dataverwerking een Applicatie van een andere Verantwoordelijke aan.
 Op basis van metadata (de {{Trace}}) die tussen Applicaties wordt uitgewisseld is het mogelijk om bij elkaar behorende Logregels in verschillende Logboeken aan elkaar te relateren.
 
 
@@ -50,8 +39,13 @@ De standaard beschrijft de interfaces (in het diagram aangeduid met groene lijne
 
 ## Componenten
 
-Deze sectie beschrijft de verschillende componenten van de standaard.
-Tevens is er een canoniek gegevensmodel ([SVG](./media/datamodel/canoniek.svg), [XLSX](./media/datamodel/canoniek.xlsx)) voor een uniforme structuur en terminologie voor alle relevante data die vastgelegd wordt in de verschillende componenten.
+Deze standaard definieert de volgende componenten:
+
+* {{Applicatie}}
+* {{Logboek}}
+* {{Register}}
+
+Tevens is er een canoniek datamodel ([SVG](./media/datamodel/canoniek.svg), [XLSX](./media/datamodel/canoniek.xlsx)) voor een uniforme structuur en terminologie voor alle relevante data die vastgelegd wordt in de verschillende componenten.
 
 ### Applicatie
 
