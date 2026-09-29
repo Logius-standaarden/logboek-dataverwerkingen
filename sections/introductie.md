@@ -44,7 +44,7 @@ De {{Betrokkene}} heeft het recht om van de {{Verantwoordelijke}} uitsluitsel te
 
 Softwaretoepassing waarmee het log van {{Dataverwerkingen}} kunnen worden bijgehouden.
 
-<dfn>Logregel</dfn>
+<dfn data-lt="Logregels">Logregel</dfn>
 
 Resultaat van een enkele gebeurtenis in de logging.
 
