@@ -19,12 +19,9 @@ De Verantwoordelijke moet voor haar specifieke situatie en Dataverwerking bepale
 
 <aside class="example">
 
-Caching voorbeeld nog uitwerken... 
+Caching voorbeeld nog uitwerken...
 
 </aside>
-
-
-
 
 ## Oude opzet ##
 
