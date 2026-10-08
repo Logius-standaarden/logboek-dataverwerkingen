@@ -179,7 +179,7 @@ Dit om te voorkomen dat niet-gestandaardiseerde namespaces worden gebruikt en er
 
 ## Component: Applicatie
 
-Voor iedere {{Applicatie}} waarin Dataverwerkingen plaatsvinden gelden de volgende specificaties voor gedrag.
+Voor iedere {{Applicatie}} waarin Dataverwerkingen plaatsvinden gelden de volgende specificaties voor gedrag. Voor overwegingen over welke {{Acties}} door Applicaties gelogd moeten worden, zie [Overwegingen](#overwegingenActies).
 
 ### Gedrag van Applicatie
 
