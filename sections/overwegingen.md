@@ -23,7 +23,7 @@ Caching voorbeeld nog uitwerken...
 
 </aside>
 
-## Oude opzet ##
+## Oude opzet
 
 De {{Verantwoordelijke}} definieert haar {{Applicaties}} in de context van deze standaard.
 Afhankelijk van de IT Achitectuur kan dit één of meerdere softwarecomponenten bevatten.
