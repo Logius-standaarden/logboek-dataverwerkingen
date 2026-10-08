@@ -4,7 +4,7 @@
 
 ## Overwegingen voor bepalen van Acties om te loggen als Verantwoordelijke
 
-De {{Verantwoordelijke}} moet zorgen dat de juiste {{Acties}} worden gelogd voor het afleggen van {{Verantwoording}}.
+De {{Verantwoordelijke}} moet zorgen dat de juiste {{Acties}} worden gelogd voor het afleggen van verantwoording.
 Het bepalen van de Acties die door een {{Applicatie}} worden uitgevoerd kan complex zijn.
 
 Afhankelijk van de IT architectuur kan een Applicatie als één of meerdere softwarecomponenten worden gedefinieerd.
@@ -39,4 +39,4 @@ In dat geval moet elke Actie worden gelogd, en de logs bewaard met het bijhorend
 Indien elke handeling door bijvoorbeeld een router en cache worden beschouwd als Acties kan dit uit de klauwen lopen.
 
 De Verantwoordelijke bepaald voor haar Applicatie welke Acties er plaatsvinden voor een Dataverwerking en logd deze volgens deze standaard.
-Een cruciale afweging voor het bepalen van Acties is dat de Verantwoordelijke bepaald welke logging nodig is in haar situatie om {{Verantwoording}} af te leggen.
+Een cruciale afweging voor het bepalen van Acties is dat de Verantwoordelijke bepaald welke logging nodig is in haar situatie om Verantwoording af te leggen.
