@@ -6,11 +6,13 @@
 
 De {{Verantwoordelijke}} moet zorgen dat de juiste {{Acties}} worden gelogd voor het afleggen van {{Verantwoording}}.
 Het bepalen van de Acties die door een {{Applicatie}} worden uitgevoerd kan complex zijn.
+
 Afhankelijk van de IT Architectuur kan een Applicatie als één of meerdere softwarecomponenten worden gedefinieerd.
 Een applicatie kan een keten aan verschillende componenten bevatten die samenwerken om een {{Dataverwerking}} uit te voeren.
 Deze keten kan o.a. componenten zoals servers, routers, loadbalancers, firewalls, caches bevatten.
 Wanneer elke handeling door elk component in de keten als Actie wordt beschouwd, moet elke Actie worden gelogd en beheerd worden.
 Dit kan tot een wildgroei aan Logregels leiden elk met lange bewaartermijnen.
+
 Afhankelijk van de situatie van de Verantwoordelijke, kan dit nodig zijn om verantwoording af te leggen.
 Echter, in sommige gevallen is het niet nodig om elke handeling als Actie te loggen.
 De Verantwoordelijke moet voor haar specifieke situatie en Dataverwerking bepalen welke logging nodig is om Verantwoording af te leggen.
