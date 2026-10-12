@@ -1,6 +1,5 @@
 # Overwegingen
-
-*Dit onderdeel is niet normatief.*
+<section class="informative">
 
 ## Overwegingen voor bepalen van Acties om te loggen als Verantwoordelijke
 
@@ -12,28 +11,23 @@ Een Applicatie kan een keten aan verschillende componenten bevatten die samenwer
 Deze keten kan componenten zoals servers, routers, loadbalancers, firewalls, caches bevatten.
 Als elke handeling door elk component in de keten als Actie zou worden beschouwd, dan is het gevolg dat elke Actie moet worden gelogd en beheerd worden.
 Dit kan leiden tot heel veel {{Logregels}} met mogelijke lange bewaartermijnen.
-
 Afhankelijk van de situatie van de Verantwoordelijke, kan dit nodig zijn om verantwoording af te leggen.
+
 Echter, in sommige gevallen is het niet nodig om elke handeling als Actie te loggen.
-De Verantwoordelijke moet voor haar specifieke situatie en Dataverwerking bepalen welke logging nodig is om Verantwoording af te leggen.
+De Verantwoordelijke moet voor haar specifieke situatie en Dataverwerking(en) bepalen welke logging nodig is om verantwoording af te leggen.
 
 <aside class="example">
 
-Caching voorbeeld nog uitwerken...
+**Indicatief voorbeeld:** Een Verantwoordelijke heeft een Dataverwerking waar data wordt opgehaald, verwerkt en doorgestuurd.
+Om deze Dataverwerking uit te voeren heeft de Verantwoordelijke een Applicatie welke een router, server en cache bevat.
+De Dataverwerking bestaat uit 4 handelingen: Eerste wordt de data wordt opgehaald via de router, daarna wordt verwerkt op de server, opgeslagen in de cache en als laatst via de router weer doorgestuurd.
+Indien de Dataverwerking persoonsgegevens betreft, moeten alle handelingen als aparte Acties gelogd worden om aan de AVG Verantwoordingsplicht te voldoen.
+Als de Dataverwerking geen persoonsgegevens bevatten dan kan het voldoende zijn om de 4 de handelingen als 1 Actie te loggen en daarmee voldoende verantwoording aan gebruikers af te kunnen leggen.
+
+**Indicatief voorbeeld:** Een Verantwoordelijke heeft een Dataverwerking waar bestanden geautomatiseerd worden ingelezen, gecontroleerd en klaargezet voor interne analyse.
+Om deze Dataverwerking uit te voeren heeft de Verantwoordelijke een Applicatie welke een SFTP-server, een validatie-engine en een database.
+De Dataverwerking bestaat uit 4 handelingen: het bestand wordt door een partner geüpload naar de SFTP-server, de validatie-engine controleert het bestand op structuurfouten, het goedgekeurde bestand wordt opgeslagen in de database, en de validatie-engine stuurt een statusrapportage terug naar de partner.
+Indien het bestand persoonsgegevens bevat, bijvoorbeeld persoonlijke declaraties, moeten alle handelingen als aparte Acties gelogd worden om aan de AVG Verantwoordingsplicht te voldoen.
+Indien het bestand geen persoonsgegevens bevat, bijvoorbeeld omgevingsmetingen, dan kan het voldoende zijn om de 4 de handelingen als 1 Actie te loggen en daarmee voldoende verantwoording aan gebruikers af te kunnen leggen.
 
 </aside>
-
-## Oude opzet
-
-De {{Verantwoordelijke}} definieert haar {{Applicaties}} in de context van deze standaard.
-Afhankelijk van de IT Achitectuur kan dit één of meerdere softwarecomponenten bevatten.
-Om {{Dataverwerkingen}} te doen voeren Applicaties {{Acties}} uit.
-Als gevolg hiervan kunnen Acties verspreid over een IT landschap plaatsvinden.
-Een keten van verschillende componenten kunnen samenwerken om een Dataverwerking uitvoeren.
-Deze keten kan componenten zoals servers, routers, loadbalancers, firewalls, caches bevatten.
-Het is mogelijk dat elke handeling door elke component in de keten als Actie wordt beschouwd.
-In dat geval moet elke Actie worden gelogd, en de logs bewaard met het bijhorende bewaartermijn.
-Indien elke handeling door bijvoorbeeld een router en cache worden beschouwd als Acties kan dit uit de klauwen lopen.
-
-De Verantwoordelijke bepaald voor haar Applicatie welke Acties er plaatsvinden voor een Dataverwerking en logd deze volgens deze standaard.
-Een cruciale afweging voor het bepalen van Acties is dat de Verantwoordelijke bepaald welke logging nodig is in haar situatie om Verantwoording af te leggen.
