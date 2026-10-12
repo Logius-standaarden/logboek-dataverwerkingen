@@ -183,7 +183,7 @@ Het gespecificeerde gedrag van Applicaties is erop gericht om de interface van h
 
 Als de Applicatie een {{Actie}} uitvoert die wordt geïnitieerd door een verzoek van een andere Applicatie, dan MOET de Applicatie de HTTP header `traceparent` volgens de [W3C Trace Context standaard](https://www.w3.org/TR/trace-context/#traceparent-header) kunnen verwerken in een {{Logboekregel}}.
 Dit houdt in dat de `trace-id` en `parent-id` uit het ontvangen verzoek respectievelijk MOETEN worden overgenomen in de `trace_id` en `parent_span_id` van de bijhorende Logboekregel. 
-Als de Applicatie zelf een Actie initieert, dan MOET de Applicatie een nieuwe Trace met een uniek `trace_id` genereren en de `parent_span_id` weglaten in  de bijhorende Logboekregel.
+Als de Applicatie zelf een Actie initieert, dan MOET de Applicatie een uniek `trace_id` genereren en de `parent_span_id` weglaten in de bijhorende Logboekregel.
 
 Een Dataverwerking kan uit meerdere acties bestaan. De applicatie MOET een voor iedere nieuwe actie een unieke `span_id` bijhouden. Iedere Trace heeft tenminste één `span_id`.
 
