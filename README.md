@@ -1,7 +1,7 @@
 <h1 align="center">Logboek Dataverwerkingen</h1>
 
 <p align="center">
-  Een beschrijving om technisch interoperabele functionaliteit voor het loggen van dataverwerkingen te implementeren.</em>
+  <em>Een beschrijving om technisch interoperabele functionaliteit voor het loggen van dataverwerkingen te implementeren.</em>
 </p>
 
 <p align="center">
