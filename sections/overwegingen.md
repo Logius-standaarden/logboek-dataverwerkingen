@@ -1,4 +1,5 @@
 # Overwegingen
+
 Dit hoofdstuk geeft een overzicht van extra overwegingen waar {{Verantwoordelijken}} aan moeten denken.
 
 ## Overwegingen voor bepalen van Acties om te loggen als Verantwoordelijke
@@ -24,13 +25,15 @@ De Dataverwerking bestaat uit 4 handelingen: Eerste wordt de data wordt opgehaal
 Indien de Dataverwerking persoonsgegevens betreft, moet er gekeken worden welke handelingen als aparte Acties moeten worden gelogd om aan de AVG Verantwoordingsplicht te voldoen.
 Dat kunnen mogelijk alle handelingen zijn.
 Als de Dataverwerking geen persoonsgegevens bevatten dan kan het voldoende zijn om de 4 de handelingen als 1 Actie te loggen en daarmee voldoende verantwoording aan gebruikers af te kunnen leggen.
+
 </aside>
 
 <aside class="example">
 Een Verantwoordelijke heeft een Dataverwerking waar bestanden geautomatiseerd worden ingelezen, gecontroleerd en klaargezet voor interne analyse.
 Om deze Dataverwerking uit te voeren heeft de Verantwoordelijke een Applicatie welke een SFTP-server, een validatie-engine en een database.
 De Dataverwerking bestaat uit 4 handelingen: het bestand wordt door een partner geüpload naar de SFTP-server, de validatie-engine controleert het bestand op structuurfouten, het goedgekeurde bestand wordt opgeslagen in de database, en de validatie-engine stuurt een statusrapportage terug naar de partner.
-Indien het bestand persoonsgegevens bevat, bijvoorbeeld persoonlijke declaraties, moeten alle handelingen als aparte Acties gelogd worden om aan de AVG Verantwoordingsplicht te voldoen.
-Indien het bestand geen persoonsgegevens bevat, bijvoorbeeld omgevingsmetingen, dan kan het voldoende zijn om de 4 de handelingen als 1 Actie te loggen en daarmee voldoende verantwoording aan gebruikers af te kunnen leggen.
+Indien de Dataverwerking persoonsgegevens betreft, moet er gekeken worden welke handelingen als aparte Acties moeten worden gelogd om aan de AVG Verantwoordingsplicht te voldoen.
+Dat kunnen mogelijk alle handelingen zijn.
+Als het bestand geen persoonsgegevens bevat, bijvoorbeeld omgevingsmetingen, dan kan het voldoende zijn om de 4 de handelingen als 1 Actie te loggen en daarmee voldoende verantwoording aan gebruikers af te kunnen leggen.
 
 </aside>
