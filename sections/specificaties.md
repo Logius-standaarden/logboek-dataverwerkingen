@@ -91,11 +91,16 @@ Een applicatie kan meerdere `span_id` voor dezelfde `trace_id` hebben.
 
 Het veld `status` is een enumeratie die de volgende waarden kan bevatten:
 
-* `Unset`: De standaardwaarde voor elke `status` is `Unset`. Dit betekent dat de dataverwerking is uitgevoerd zonder interne fout. Deze waarde wordt toegepast wanneer de dataverwerking technisch correct is afgerond, ook als er geen resultaat beschikbaar is of wanneer de invoer onvolledig was.
-* `Ok`: De waarde `Ok` kan optioneel gebruikt worden wanneer de ontwikkelaar expliciet wil markeren dat de dataverwerking succesvol is afgerond. Dit is afhankelijk van hoe de organisatie die de standaard implementeert een dataverwerking als succesvol definieert en of zij dit onderscheid expliciet willen loggen als andere waarde dan `Unset`.
-* `Error`: De waarde `Error` wordt toegekend bij fouten die zijn ontstaan binnen het systeem dat de dataverwerking uitvoert, zoals interne fouten of mislukte uitvoeringen door technische oorzaken.
+* `Unset`: De standaardwaarde voor elke `status` is `Unset`. Dit betekent dat de Actie is uitgevoerd zonder interne fout. Deze waarde wordt toegepast wanneer de Actie technisch correct is afgerond, ook als er geen resultaat beschikbaar is of wanneer de invoer onvolledig was.
+* `Ok`: De waarde `Ok` kan optioneel gebruikt worden wanneer de ontwikkelaar expliciet wil markeren dat de dataverwerking succesvol is afgerond.
+Hoewel dit tegenintuïtief lijkt, is het niet nodig om de status van een Actie op `Ok` te zetten wanneer bekend is dat de Actie zonder fouten is voltooid, aangezien dit onder `Unset` valt.
+`Ok` representeert een ondubbelzinnige "laatste bevestiging" van de status van een Actie die expliciet door een gebruiker is ingesteld.
+Dit is handig in elke situatie waarin een ontwikkelaar wil dat er geen andere interpretatie van een Actie mogelijk is dan "geslaagd". 
+* `Error`: De waarde `Error` wordt toegekend bij fouten die zijn ontstaan binnen het systeem dat de Actie uitvoert, zoals interne fouten of mislukte uitvoeringen door technische oorzaken. `Error` is alleen nodig als er een fout is opgetreden bij het interne proces. Een Actie die niet klopt op basis van de gegeven gebruikersinput, maar die zonder fouten is afgehandeld, hoort dus status `Unset` te krijgen.
 
-De waarden `Unset` en `Ok` worden altijd bepaald op basis van het resultaat van de verwerking. De waarde `Ok` is optioneel en kan gebruikt worden als de organisatie ervoor kiest dataverwerkingen expliciet als succesvol te markeren. `Error` is alleen nodig als er een fout is opgetreden bij het interne proces. Een dataverwerking die niet klopt op basis van de gegeven gebruikersinput, maar die zonder fouten is afgehandeld, hoort dus status `Unset` te krijgen.
+<p class="note"> Nogmaals: `Unset` geeft aan dat een Actie zonder fouten is voltooid. 
+`Ok` betekent dat een ontwikkelaar een Actie expliciet als succesvol heeft gemarkeerd. 
+In de meeste gevallen is het niet nodig om een Actie expliciet als `Ok` te markeren.
 
 #### `name`
 
@@ -193,9 +198,11 @@ Wanneer een actie binnen een Applicatie is gestart door een andere actie, dan MO
 
 Als een Dataverwerking meerdere Betrokkenen heeft dan MOET de applicatie voor iedere Betrokkene een aparte logregel wegschrijven. Een logregel kan naar 0 of 1 Betrokkenen verwijzen.
 
-De Applicatie MOET voor iedere actie (`span_id`) een logregel wegschrijven via de interface van het Logboek.
+De Applicatie MOET voordat elke Actie (`span_id`) wordt uitgevoerd een Logregel opslaan in het Logboek.
 
-De Applicatie MOET bijhouden of een actie geslaagd of mislukt is en dit per Dataverwerking als status (`status`) meegeven in de Logregel.
+De Applicatie MOET kunnen achterhalen of de uitvoer van een Actie geslaagd of mislukt is.
+Dit kan per Logregel als status (`status`) worden opgeslagen.
+Zie [status](#status) voor een voorbeeld beschrijving van hoe dit geimplementeerd kan worden.
 
 Als de Applicatie een verzoek van een andere Applicatie kan ontvangen, MOET de Applicatie metadata volgens de W3C Trace Context standaard kunnen verwerken en gebruiken in de eigen Trace(s).
 Metadata verkregen via W3C Trace Context MOET in `attributes` meegenomen worden als velden die beginnen met `dpl.core.foreign_operation`.
