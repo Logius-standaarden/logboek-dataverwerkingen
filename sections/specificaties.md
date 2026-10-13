@@ -73,8 +73,8 @@ In die extensie zal er wel een specifieke structuur beschreven en hoe daar aan k
 | [`resource`](#resource)             | object  | optioneel  |
 | [`attributes`](#attributes)         | object  | verplicht  |
 
-<p class="note">Bytes kunnen als hexadecimaal of binair worden geëncodeerd. 
-Een 16 byte array als hexadecimale string bevat 32 karakters. 
+<p class="note">Bytes kunnen als hexadecimaal of binair worden geëncodeerd.
+Een 16 byte array als hexadecimale string bevat 32 karakters.
 Zie ook <a href="https://opentelemetry.io/docs/specs/otel/trace/api/#retrieving-the-traceid-and-spanid">OpenTelemetry documentatie</a>.
 
 #### `trace_id`
@@ -95,11 +95,11 @@ Het veld `status` is een enumeratie die de volgende waarden kan bevatten:
 * `Ok`: De waarde `Ok` kan optioneel gebruikt worden wanneer de ontwikkelaar expliciet wil markeren dat de dataverwerking succesvol is afgerond.
 Hoewel dit tegenintuïtief lijkt, is het niet nodig om de status van een Actie op `Ok` te zetten wanneer bekend is dat de Actie zonder fouten is voltooid, aangezien dit onder `Unset` valt.
 `Ok` representeert een ondubbelzinnige "laatste bevestiging" van de status van een Actie die expliciet door een gebruiker is ingesteld.
-Dit is handig in elke situatie waarin een ontwikkelaar wil dat er geen andere interpretatie van een Actie mogelijk is dan "geslaagd". 
+Dit is handig in elke situatie waarin een ontwikkelaar wil dat er geen andere interpretatie van een Actie mogelijk is dan "geslaagd".
 * `Error`: De waarde `Error` wordt toegekend bij fouten die zijn ontstaan binnen het systeem dat de Actie uitvoert, zoals interne fouten of mislukte uitvoeringen door technische oorzaken. `Error` is alleen nodig als er een fout is opgetreden bij het interne proces. Een Actie die niet klopt op basis van de gegeven gebruikersinput, maar die zonder fouten is afgehandeld, hoort dus status `Unset` te krijgen.
 
-<p class="note"> Nogmaals: `Unset` geeft aan dat een Actie zonder fouten is voltooid. 
-`Ok` betekent dat een ontwikkelaar een Actie expliciet als succesvol heeft gemarkeerd. 
+<p class="note"> Nogmaals: `Unset` geeft aan dat een Actie zonder fouten is voltooid.
+`Ok` betekent dat een ontwikkelaar een Actie expliciet als succesvol heeft gemarkeerd.
 In de meeste gevallen is het niet nodig om een Actie expliciet als `Ok` te markeren.
 
 #### `name`
@@ -202,7 +202,7 @@ De Applicatie MOET voordat elke Actie (`span_id`) wordt uitgevoerd een Logregel 
 
 De Applicatie MOET kunnen achterhalen of de uitvoer van een Actie geslaagd of mislukt is.
 Dit kan per Logregel als status (`status`) worden opgeslagen.
-Zie [status](#status) voor een voorbeeld beschrijving van hoe dit geimplementeerd kan worden.
+Zie [status](#status) voor een gedetaileerde beschrijving.
 
 Als de Applicatie een verzoek van een andere Applicatie kan ontvangen, MOET de Applicatie metadata volgens de W3C Trace Context standaard kunnen verwerken en gebruiken in de eigen Trace(s).
 Metadata verkregen via W3C Trace Context MOET in `attributes` meegenomen worden als velden die beginnen met `dpl.core.foreign_operation`.
