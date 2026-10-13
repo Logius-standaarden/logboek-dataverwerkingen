@@ -1,13 +1,22 @@
-# Standaard logboek dataverwerkingen
+<h1 align="center">Logboek Dataverwerkingen</h1>
 
-## Deze standaard is in ontwikkeling
+<p align="center">
+  <em>Een beschrijving om technisch interoperabele functionaliteit voor het loggen van dataverwerkingen te implementeren.</em>
+</p>
 
-- De laatste ontwikkelingen staan in de - branch [develop](https://github.com/Logius-standaarden/logboek-dataverwerkingen/tree/develop)
-- De laatste versie van de standaard online lezen - [ReSpec publicatie](https://logius-standaarden.github.io/logboek-dataverwerkingen/)
-- Meedoen aan de discussie en ontwikkeling kan via - [Mattermost Digilab omgeving](https://digilab.overheid.nl/chat/verwerkingenlogging)
-- Vragen kunnen worden gemailed aan [api@logius.nl](mailto:api@logius.nl) of als issue worden ingebracht [via deze link](https://github.com/Logius-standaarden/logboek-dataverwerkingen/issues)
+<p align="center">
+  <a href="https://gitdocumentatie.logius.nl/publicatie/logboek/dataverwerkingen/"><img alt="Gepubliceerde versie 1.0.0" src="https://img.shields.io/badge/Gepubliceerd-1.0.0-0B71CE?style=flat-square"></a>
+</p>
 
-## Inleiding
+<p align="center">
+  <a href="https://logius-standaarden.github.io/logboek-dataverwerkingen/"><b>Werkversie</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/Logius-standaarden/logboek-dataverwerkingen/issues/new/choose"><b>Issue indienen</b></a> &nbsp;·&nbsp;
+  <a href="https://gitdocumentatie.logius.nl/publicatie/api/beheermodel/"><b>Beheermodel</b></a>
+</p>
+
+---
+
+## Over deze standaard
 
 De overheid wil voor burgers en bedrijven zo transparant mogelijk zijn in de omgang met hun data. Daarom is het bij de informatieverwerking in datasets belangrijk om voor elke mutatie of raadpleging vast te leggen wie deze actie wanneer uitvoert, en waarom. Deze herleidbaarheid speelt zowel een rol in het kader van de wetgeving op het gebied van privacy als ook het streven naar openheid en transparantie bij de overheid. Voor een optimale samenwerking over organisaties en bronnen heen is voor deze logging een algemene standaard nodig.
 
@@ -28,7 +37,7 @@ Door Dataverwerkingen te loggen volgens de standaard kunnen organisaties het dat
 
 ## Overzicht
 
-De Logboek Dataverwerkingen (LDV) standaard bestaat uit de volgende vier documenten:
+De Logboek Dataverwerkingen (LDV) standaard bestaat uit de volgende vier vastgestelde documenten en twee werkversies van extensies:
 
 | Beschrijving van het document  | Gepubliceerde versie                                                                   | Werk versie                                                                                                                            | Repository                                                                                                                                |
 |--------------------------------|----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
