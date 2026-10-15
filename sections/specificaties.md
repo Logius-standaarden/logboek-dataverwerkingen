@@ -188,7 +188,7 @@ Het gespecificeerde gedrag van Applicaties is erop gericht om de interface van h
 De Applicatie MOET een nieuwe Trace met een uniek `trace_id` bijhouden voor iedere nieuwe Dataverwerking. In een Trace wordt de metadata bijgehouden die nodig is om de interface van een Logboek te gebruiken.
 
 Een Dataverwerking kan uit meerdere Acties bestaan. De Applicatie MOET een voor iedere nieuwe Actie een unieke `span_id` bijhouden. Iedere Trace heeft tenminste één `span_id`.
-Voor overwegingen voor het bepalen van Acties als Verantwoordelijke, zie [Overwegingen](overwegingen#Overwegingen).
+Voor overwegingen voor het bepalen van Acties als Verantwoordelijke, zie [Overwegingen](#overwegingen-voor-bepalen-van-acties-om-te-loggen-als-verantwoordelijke).
 
 Wanneer een actie binnen een Applicatie is gestart door een andere actie, dan MOET de Applicatie de `trace_id` ongewijzigd overnemen en de `span_id` opnemen in een veld genaamd `parent_span_id` voor deze nieuwe actie.
 
